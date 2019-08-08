@@ -9,7 +9,7 @@ jobs:
             - "8c:a4:dd:2c:47:4c:63:aa:90:0b:e0:d6:15:be:87:82"
       - run:
           name: "Bootstrap the build"
-          command: ssh -o StrictHostKeyChecking=no $GPS_BUILD_USER@$GPS_BUILD_SERVER "$GPS_BUILD_BOOTSTRAP"
+          command: ssh -o StrictHostKeyChecking=no $GPS_BUILD_USER@$GPS_BUILD_SERVER "$GPS_BUILD_BOOTSTRAP"-vvv
 workflows:
   version: 2
   build-master:
