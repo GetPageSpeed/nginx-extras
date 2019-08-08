@@ -1,0 +1,7 @@
+---
+
+repo: limithit/ngx_dynamic_limit_req_module
+summary: Dynamically lock IP and release it periodically.
+description: |
+  Dynamically lock IP and release it periodically.
+soname: ngx_http_dynamic_limit_req_module
