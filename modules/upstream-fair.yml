@@ -1,0 +1,6 @@
+---
+
+repo: itoffshore/nginx-upstream-fair
+summary: The fair load balancer module for nginx
+description: The fair load balancer module for nginx
+soname: ngx_http_upstream_fair_module
