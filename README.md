@@ -1,11 +1,18 @@
 # nginx-extras
 
-The nginx-extras project is your freeware Nginx Plus!
+The nginx-extras project is your freeware Nginx Plus for CentOS/RHEL!
 
-It allows you to:
+For sysadmins this allows to:
 
 * install prebuilt CentOS/RHEL packages for virtually any NGINX module, without compilation
-* submit *your* NGINX module for build in GetPageSpeed extras RPM repository
+* save time, any module can be installed in seconds
+* save production systems from pollution by compilation software
+
+For module authors this allows to:
+
+* deliver your module as installable package *in ten minutes*
+* automatic rebuilds when you tag new release of your module (within 24 hrs)
+* automatic rebuilds against newly released NGINX versions
 
 ## Install any module whatsoever in CentOS/RHEL 6/7
 
@@ -34,7 +41,7 @@ The module requirements are pretty straightforward and most of module repositori
 
 * Fork the repository
 * Create `modules/<handle>.yml` file and specify parameters like the example below. The handle should be unique. The resulting package will have name `nginx-module-<handle>`, e.g. `nginx-module-foo`
-* Submit pull request. That's it! Your module will be automatically built against both stable and mainline NGINX. Check it within 30 mins [here](https://extras.getpagespeed.com/redhat/7/mainline/x86_64/repoview/letter_n.group.html) (for mainline NGINX) and [here](https://extras.getpagespeed.com/redhat/7/x86_64/repoview/letter_n.group.html) (for stable NGINX). If it doesn't appear, [raise an issue](https://github.com/GetPageSpeed/nginx-extras/issues/new).
+* Submit pull request. That's it! Your module will be automatically built against both stable and mainline NGINX. Check it within 10 mins [here](https://extras.getpagespeed.com/redhat/7/mainline/x86_64/repoview/letter_n.group.html) (for mainline NGINX) and [here](https://extras.getpagespeed.com/redhat/7/x86_64/repoview/letter_n.group.html) (for stable NGINX). If it doesn't appear, [raise an issue](https://github.com/GetPageSpeed/nginx-extras/issues/new).
 
 ### Sample module.yml
 
@@ -53,6 +60,28 @@ soname: ngx_http_srcache_filter_module
 * `summary`: short (up to 70 characters) summary of the module
 * `description`: longer description of the module
 * `soname`: basename of dynamic module filename
+* `build_requires` allows you to specify external devel library dependencies, e.g.:
+
+```yml 
+build_requires:
+  - hiredis-devel
+```
 
 Version is automatically detected from your latest release, using [`lastversion`](https://github.com/dvershinin/lastversion).
 Make sure that your latest release has a `LICENSE` if you want it to be included in resulting RPM!
+
+## Caveats (for module authors)
+
+Some modules have a pretty sophisticated RPM logic. 
+One is example is `nginx-module-pagespeed`: it needs custom SELinux policy, among other things.
+Don't worry, we still build those modules elsewhere, and 
+they are available through our repository same as any module that is built through this sytem.
+
+If your module is one of those, raise an issue here.
+
+99% of modules can be still built through this system.
+
+## Caveats (for sysadmins)
+
+Using our repository implies you take all the risks associated with using an unofficial repository.
+Purchase Nginx Plus subscription if not sure :)
