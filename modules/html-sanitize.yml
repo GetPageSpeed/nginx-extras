@@ -1,6 +1,6 @@
 ---
 
-repo: youzan/ngx_http_html_sanitize_module
+repo: dvershinin/ngx_http_html_sanitize_module
 summary: NGINX module to sanitize HTML5 with whitelisted elements, attributes and CSS
 description: |
   ngx_http_html_sanitize_module - It's base on google's gumbo-parser as HTML5 parser and
