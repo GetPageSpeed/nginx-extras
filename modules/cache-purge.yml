@@ -1,6 +1,6 @@
 ---
 
-repo: FRiCKLE/ngx_cache_purge
+repo: nginx-modules/ngx_cache_purge
 summary: NGINX cache purge module
 description: |
   nginx module which adds ability to purge content from FastCGI, proxy,
