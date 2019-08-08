@@ -1,0 +1,7 @@
+---
+
+repo: openresty/redis2-nginx-module
+summary: Nginx upstream module for the Redis 2.0 protocol
+description: |
+  Nginx upstream module for the Redis 2.0 protocol
+soname: ngx_http_redis2_module
