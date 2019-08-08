@@ -1,0 +1,7 @@
+---
+
+repo: nginx-shib/nginx-http-shibboleth
+summary: Shibboleth auth request module for nginx
+description: |
+  Shibboleth auth request module for nginx
+soname: ngx_http_shibboleth_module
