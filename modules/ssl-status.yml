@@ -1,0 +1,10 @@
+---
+
+repo: andreydomas/ngx_http_ssl_status_module
+summary: Nginx SSL statistics module
+description: |
+  Each worker process appends its SSL statistics values to shared memory zone
+  from which this values can be viewed by HTTP-request.
+  It's possible to collect independent statistics for a virtual server or assign
+  multiple virtual servers to one zone and get summed up values for them.
+soname: ngx_http_ssl_status_module
