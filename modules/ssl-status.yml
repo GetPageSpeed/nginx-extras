@@ -1,6 +1,6 @@
 ---
 
-repo: andreydomas/ngx_http_ssl_status_module
+repo: dvershinin/ngx_http_ssl_status_module
 summary: Nginx SSL statistics module
 description: |
   Each worker process appends its SSL statistics values to shared memory zone
