@@ -8,3 +8,4 @@ description: |
   It's possible to collect independent statistics for a virtual server or assign
   multiple virtual servers to one zone and get summed up values for them.
 soname: ngx_http_ssl_status_module
+comment: This module, according to author, works only when compiled in statically
