@@ -5,3 +5,4 @@ summary: Nginx module to add a sticky cookie to be always forwarded to the same 
 description: |
   Nginx module to add a sticky cookie to be always forwarded to the same upstream server
 soname: ngx_http_sticky_module
+bump: 1
