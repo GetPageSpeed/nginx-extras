@@ -1,0 +1,9 @@
+---
+
+repo: sto/ngx_http_auth_pam_module
+summary: PAM authentication dynamic module for NGINX
+description: |
+  NGINX module to use PAM for simple HTTP authentication
+soname: ngx_http_auth_pam_module
+build_requires:
+  - pam-devel
