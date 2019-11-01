@@ -1,0 +1,9 @@
+---
+
+repo: eustas/ngx_brotli
+summary: NGINX brotli dynamic modules
+description: |
+  NGINX brotli dynamic modules
+soname: ngx_http_brotli_filter_module
+build_requires:
+  - brotli-devel
