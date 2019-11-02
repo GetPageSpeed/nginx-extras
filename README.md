@@ -1,6 +1,15 @@
 # nginx-extras
 
-The nginx-extras project is your freeware Nginx Plus for CentOS/RHEL!
+The [nginx-extras project, as part of GetPageSpeed repositories](https://www.getpagespeed.com/redhat) 
+is your source of secure, well-maintained packages of NGINX and its 30+ modules.
+
+Production-ready, quality binary RPM packages for NGINX Brotli, PageSpeed, dynamic ETags, ModSecurity modules (and many more),
+all available for installation via `yum/dnf`, giving you ability to configure your ultimate performant and secure NGINX setup.
+
+Available by [subscription](https://www.getpagespeed.com/repo-subscribe), 
+it is a budget Nginx Plus alternative, for CentOS/RHEL!
+
+**Free for CentOS/RHEL 8 users**.
 
 For sysadmins this allows to:
 
