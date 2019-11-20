@@ -7,6 +7,3 @@ description: |
 soname: ngx_http_dynamic_limit_req_module
 build_requires:
   - hiredis-devel
-only_on_branch: stable
-comment: |
-  Fails to compile starting from NGINX 1.17.6: https://github.com/limithit/ngx_dynamic_limit_req_module/issues/9
