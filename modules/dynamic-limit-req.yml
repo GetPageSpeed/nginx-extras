@@ -1,9 +1,10 @@
 ---
 
 repo: limithit/ngx_dynamic_limit_req_module
-summary: Dynamically lock IP and release it periodically.
+summary: NGINX module to dynamically lock IP and release it periodically
 description: |
-  Dynamically lock IP and release it periodically.
+  NGINX module to dynamically lock IP and release it periodically.
+  This module is an extension based on ngx_http_limit_req_module.
 soname: ngx_http_dynamic_limit_req_module
 build_requires:
   - hiredis-devel
