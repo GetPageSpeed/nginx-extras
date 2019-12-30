@@ -1,8 +1,9 @@
 ---
 
 repo: nbs-system/naxsi
-summary: Nginx Anti XSS & SQL Injection module
+summary: NGINX Anti XSS & SQL Injection module
 description: |
   NAXSI is an open-source, high performance, low rules
   maintenance WAF for NGINX
 soname: ngx_http_naxsi_module
+config_dirname: naxsi_src
