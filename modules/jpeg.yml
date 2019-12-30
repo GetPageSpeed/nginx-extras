@@ -1,0 +1,11 @@
+---
+
+repo: ioppermann/modjpeg-nginx
+summary: nginx JPEG filter module
+description: |
+  NGINX filter module for adding overlays and logos to JPEGs
+  on-the-fly without degrading the quality of the image
+soname: ngx_http_jpeg_filter_module
+build_requires:
+  - libmodjpeg-devel
+  - libjpeg-turbo-devel
