@@ -1,0 +1,8 @@
+---
+
+repo: openresty/echo-nginx-module
+summary: nginx Echo module
+description: |
+  An Nginx module for bringing the power of "echo", "sleep", "time"
+  and more to Nginx's config file
+soname: ngx_http_echo_module

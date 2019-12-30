@@ -1,0 +1,9 @@
+---
+
+repo: dvershinin/ngx_webp
+summary: nginx WebP module
+description: |
+  nginx module which converts jpg/png images on fly and sends webp response
+soname: ngx_http_webp_module
+build_requires:
+  - libwebp-tools

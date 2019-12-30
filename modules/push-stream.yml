@@ -1,0 +1,7 @@
+---
+
+repo: wandenberg/nginx-push-stream-module
+summary: nginx push stream module
+description: |
+  A pure stream http push technology for your Nginx setup
+soname: ngx_http_push_stream_module

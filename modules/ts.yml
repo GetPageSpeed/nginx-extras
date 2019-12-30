@@ -1,0 +1,10 @@
+---
+
+repo: arut/nginx-ts-module
+summary: NGINX MPEG-TS Live Module
+description: |
+  NGINX MPEG-TS Live Module:
+    * receives MPEG-TS over HTTP
+    * produces and manages live HLS
+    * produces and manages live MPEG-DASH
+soname: ngx_ts_module
