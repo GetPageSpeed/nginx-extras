@@ -1,0 +1,10 @@
+---
+
+repo: nulab/nginx-length-hiding-filter-module
+summary: Nginx Length Hiding Filter Module
+description: |
+  NGINX length hiding filter module provides functionality to append
+  randomly generated HTML comment to the end of response body to
+  hide correct response length and make it difficult for attackers
+  to guess secure token
+soname: ngx_http_length_hiding_filter_module
