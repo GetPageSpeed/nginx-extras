@@ -1,7 +1,7 @@
 ---
 
 repo: dvershinin/nginx-sticky-module-ng
-summary: NGINX module to add a sticky cookie to be always forwarded to the same upstream server
+summary: NGINX sticky cookie module
 description: |
   NGINX module to add a sticky cookie to be always forwarded to the
   same upstream server
