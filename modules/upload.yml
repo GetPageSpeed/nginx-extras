@@ -1,7 +1,7 @@
 ---
 
 repo: fdintino/nginx-upload-module
-summary: NGINX module for handling file uploads using multipart/form-data encoding (RFC 1867)
+summary: NGINX module for handling file uploads
 description: |
   A module for NGINX for handling file uploads using
   multipart/form-data encoding (RFC 1867) and resumable uploads
