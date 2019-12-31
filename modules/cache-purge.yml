@@ -3,7 +3,7 @@
 repo: nginx-modules/ngx_cache_purge
 summary: NGINX Cache Purge module
 description: |
-  nginx module which adds ability to purge content from FastCGI, proxy,
+  NGINX module which adds ability to purge content from FastCGI, proxy,
   SCGI and uWSGI caches. A purge operation removes the content with
   the same cache key as the purge request has.
 soname: ngx_http_cache_purge_module

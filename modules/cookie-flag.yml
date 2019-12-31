@@ -1,7 +1,7 @@
 ---
 
 repo: AirisX/nginx_cookie_flag_module
-summary: nginx cookie flag module
+summary: NGINX cookie flag module
 description: |
-  The Nginx module for adding cookie flag
+  The NGINX module for adding cookie flag
 soname: ngx_http_cookie_flag_filter_module

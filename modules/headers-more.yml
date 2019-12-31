@@ -1,7 +1,7 @@
 ---
 
 repo: openresty/headers-more-nginx-module
-summary: nginx Headers More dynamic module
+summary: NGINX Headers More dynamic module
 description: |
-  Set, add, and clear arbitrary output headers in NGINX http servers.
+  Set, add, and clear arbitrary output headers in NGINX HTTP servers.
 soname: ngx_http_headers_more_filter_module

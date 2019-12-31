@@ -3,7 +3,9 @@
 repo: dvershinin/ngx_dynamic_etag
 summary: NGINX module for adding ETag to dynamic content
 description: |
-  This NGINX module empowers your dynamic content with automatic ETag header.
-  It allows client browsers to issue conditional GET requests to dynamic pages. 
+  This NGINX module empowers your dynamic content with automatic ETag
+  header. It allows client browsers to issue conditional GET requests
+  to dynamic pages.
+
   And thus saves bandwidth and ensures better performance!
 soname: ngx_http_dynamic_etag_module

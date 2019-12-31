@@ -3,8 +3,9 @@
 repo: openresty/srcache-nginx-module
 summary: Transparent subrequest-based caching layout for arbitrary NGINX locations
 description: |
-  This module provides a transparent caching layer for arbitrary nginx
-  locations (like those use an upstream or even serve static disk files).
+  This module provides a transparent caching layer for arbitrary NGINX
+  locations (like those use an upstream or even serve static disk
+  files).
 
   The caching behavior is mostly compatible with RFC 2616.
 soname: ngx_http_srcache_filter_module

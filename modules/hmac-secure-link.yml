@@ -3,5 +3,6 @@
 repo: nginx-modules/ngx_http_hmac_secure_link_module
 summary: Alternative NGINX HMAC Secure Link module with support for OpenSSL hashes
 description: |
-  Alternative NGINX HMAC Secure Link module with support for OpenSSL hashes
+  Alternative NGINX HMAC Secure Link module with support for OpenSSL
+  hashes
 soname: ngx_http_hmac_secure_link_module

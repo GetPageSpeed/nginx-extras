@@ -1,7 +1,7 @@
 ---
 
 repo: aperezdc/ngx-fancyindex
-summary: nginx Fancy Index module
+summary: NGINX Fancy Index module
 description: |
   The Fancy Index module makes possible the generation of file
   listings, like the built-in autoindex module does, but adding
