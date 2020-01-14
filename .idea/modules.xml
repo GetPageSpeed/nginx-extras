@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/nginx-extras.iml" filepath="$PROJECT_DIR$/.idea/nginx-extras.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../nginx-modules/.idea/nginx-modules.iml" filepath="$PROJECT_DIR$/../nginx-modules/.idea/nginx-modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../scripts/.idea/scripts.iml" filepath="$PROJECT_DIR$/../scripts/.idea/scripts.iml" />
     </modules>
   </component>
 </project>
