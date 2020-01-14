@@ -3,7 +3,7 @@
 repo: vozlt/nginx-module-vts
 summary: NGINX virtual host traffic status module
 description: |
-  This is an Nginx module that provides access to virtual host status
+  This is an NGINX module that provides access to virtual host status
   information. It contains the current status such as servers,
   upstreams, caches. This is similar to the live activity monitoring
   of NGINX Plus
