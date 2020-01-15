@@ -1,0 +1,8 @@
+---
+
+repo: dvershinin/nginx-http-concat
+summary: HTTP Concatenation module for NGINX
+description: |
+  NGINX module for concatenating files in a given context: CSS and JS files
+  usually
+soname: ngx_http_concat_module
