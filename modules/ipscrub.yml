@@ -1,0 +1,11 @@
+---
+
+repo: masonicboom/ipscrub
+summary: IP address anonymizer module for NGINX
+description: |
+  This is an IP address anonymizer for NGINX log files.
+  It's an nginx module that generates an IP-based hash.
+  You can use this hash to link requests from the same source,
+  without identifying your users by IP address.
+soname: ngx_ipscrub_module
+config_dirname: ipscrub
