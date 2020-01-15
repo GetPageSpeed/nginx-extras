@@ -11,6 +11,5 @@ description: |
   less memory and cpu than other realtime log analyzing solutions.
   Useful for traffic accounting based on NGINX config logic
   (by location / server / user-defined-variables).
-soname:
-  - ngx_http_accounting_module
-  - ngx_stream_accounting_module
+soname: ngx_http_accounting_module
+
