@@ -9,3 +9,5 @@ description: |
   without identifying your users by IP address.
 soname: ngx_ipscrub_module
 config_dirname: ipscrub
+build_requires:
+  - libbsd-devel
