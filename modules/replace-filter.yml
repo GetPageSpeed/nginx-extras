@@ -1,0 +1,10 @@
+---
+
+repo: dvershinin/replace-filter-nginx-module
+summary: Streaming regular expression replacement in response bodies
+description: |
+  This module is already quite usable though still at the early phase
+  of development and is considered EXPERIMENTAL.
+soname: ngx_http_replace_filter_module
+build_requires:
+  - libsregex-devel
