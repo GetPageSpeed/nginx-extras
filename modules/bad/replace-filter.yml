@@ -8,3 +8,4 @@ description: |
 soname: ngx_http_replace_filter_module
 build_requires:
   - libsregex-devel
+comment: https://github.com/openresty/replace-filter-nginx-module/issues/29
