@@ -9,8 +9,6 @@ all available for installation via `yum/dnf`, giving you ability to configure yo
 Available by [subscription](https://www.getpagespeed.com/repo-subscribe), 
 it is a budget Nginx Plus alternative, for CentOS/RHEL!
 
-**Free for CentOS/RHEL 8 users**.
-
 For sysadmins this allows to:
 
 * install prebuilt CentOS/RHEL packages for virtually any NGINX module, without compilation
