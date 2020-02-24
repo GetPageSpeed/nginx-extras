@@ -1,0 +1,7 @@
+---
+
+repo: dvershinin/nginx-statsd
+summary: NGINX module for sending stats to statsd
+description: |
+  NGINX module for sending stats to statsd
+soname: ngx_http_statsd_module
