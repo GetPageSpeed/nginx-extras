@@ -7,3 +7,5 @@ description: |
   rate of cookies but also limits the number of malicious ip
   forged cookies.
 soname: ngx_http_cookie_limit_req_module
+build_requires:
+  - hiredis-devel
