@@ -1,0 +1,8 @@
+---
+
+repo: anomalizer/ngx_aws_auth
+summary: NGINX module to proxy to authenticated AWS services
+description: |
+  This NGINX module can proxy requests to authenticated S3 backends
+  using Amazon's V4 authentication API.
+soname: ngx_http_aws_auth_module
