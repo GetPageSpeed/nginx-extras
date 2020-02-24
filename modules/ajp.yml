@@ -1,0 +1,9 @@
+---
+
+repo: dvershinin/nginx_ajp_module
+summary: Support AJP protocol proxy with NGINX
+description: |
+  With this module, Nginx can connect to AJP port directly.
+  The motivation of writing these modules is Nginx's high performance
+  and robustness.
+soname: ngx_http_ajp_module
