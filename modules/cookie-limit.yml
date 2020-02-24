@@ -1,0 +1,9 @@
+---
+
+repo: limithit/ngx_cookie_limit_req_module
+summary: NGINX module to limit the number of malicious ip forged cookies
+description: |
+  The ngx_cookie_limit_req_module module not only limits the access
+  rate of cookies but also limits the number of malicious ip
+  forged cookies.
+soname: ngx_http_cookie_limit_req_module
