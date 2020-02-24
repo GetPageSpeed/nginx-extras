@@ -18,3 +18,5 @@ description: |
     * Format convert(e.g. PNG -> JPEG)
     * Color-space convert(e.g. CMYK -> sRGB)
 soname: ngx_http_small_light_module
+build_requires:
+  - ImageMagick-devel
