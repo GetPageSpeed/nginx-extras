@@ -3,7 +3,7 @@
 repo: GetPageSpeed/ngx_immutable
 summary: NGINX module for setting immutable caching on static assets
 description: |
-  This NGINX module can help improve caching of your public
+  This tiny NGINX module can help improve caching of your public
   static assets, by setting far future expiration together with
   immutable attribute.
 soname: ngx_http_immutable_module
