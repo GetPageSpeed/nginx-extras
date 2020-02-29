@@ -1,0 +1,8 @@
+---
+
+repo: dvershinin/nginx-module-sysguard
+summary: NGINX sysguard module
+description: |
+  This module can be used to protect your server in case system
+  load, memory use goes too high or requests are responded too slow
+soname: ngx_http_sysguard_module
