@@ -7,4 +7,4 @@ description: |
     * receives MPEG-TS over HTTP
     * produces and manages live HLS
     * produces and manages live MPEG-DASH
-soname: ngx_ts_module
+soname: ngx_http_ts_module
