@@ -1,0 +1,7 @@
+---
+
+repo: mailru/graphite-nginx-module 
+summary: An nginx module for collecting stats into Graphite
+description: |
+  An nginx module for collecting location stats into Graphite.
+soname: ngx_http_graphite_module 
