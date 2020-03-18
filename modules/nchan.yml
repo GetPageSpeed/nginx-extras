@@ -9,3 +9,5 @@ description: |
   and hundreds, thousands, or millions of live subscribers.
   It can buffer messages in memory, on-disk, or via Redis
 soname: ngx_nchan_module
+devtoolset:
+  el7: 8
