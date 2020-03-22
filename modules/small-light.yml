@@ -1,7 +1,7 @@
 ---
 
 repo: dvershinin/ngx_small_light
-summary: Dynamic Image Transformation Module For NGINX
+summary: Dynamic image transformation module For NGINX
 description: |
   A dynamic image transformation module for NGINX.
   Supports the various image-processings below.
