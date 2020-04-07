@@ -3,5 +3,5 @@
 repo: wandenberg/nginx-push-stream-module
 summary: NGINX push stream module
 description: |
-  A pure stream http push technology for your NGINX setup
+  A pure stream HTTP push technology for your NGINX setup
 soname: ngx_http_push_stream_module
