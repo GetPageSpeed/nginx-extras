@@ -1,0 +1,9 @@
+---
+
+repo: openresty/drizzle-nginx-module
+summary: NGINX module for talking to MySQL and Drizzle directly
+description: |
+  NGINX upstream module that talks to mysql and drizzle by libdrizzle
+soname: ngx_http_drizzle_module
+build_requires:
+  - libdrizzle-devel
