@@ -17,4 +17,5 @@ soname: ngx_http_passenger_module
 build_requires:
   - rubygem-rake
   - ruby-devel
+  - libcurl-devel
 config_dirname: src/nginx_module
