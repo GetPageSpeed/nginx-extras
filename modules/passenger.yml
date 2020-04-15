@@ -7,7 +7,7 @@ description: |
   to be fast, robust and lightweight.
 
   It takes a lot of complexity out of deploying web apps, adds powerful
-  enterprise-grade features that  are useful in production, and makes
+  enterprise grade features that  are useful in production, and makes
   administration much easier and less complex.
 
   Phusion Passenger supports Ruby, Python, Node.js and Meteor, and is
