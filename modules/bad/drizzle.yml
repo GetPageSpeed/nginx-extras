@@ -7,3 +7,4 @@ description: |
 soname: ngx_http_drizzle_module
 build_requires:
   - libdrizzle-devel
+comment: requires ancient libdrizzle-1.0 which is troublesome to package
