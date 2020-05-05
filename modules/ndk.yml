@@ -6,4 +6,4 @@ description: |
   Nginx module that adds additional generic tools that module
   developers can use in their own modules
 soname: ndk_http_module
-cc_opt: "-DNDK_SET_VAR"
+cc_opt: "-DNDK_SET_VAR -DNDK_UPSTREAM_LIST"
