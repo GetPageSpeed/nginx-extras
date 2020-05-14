@@ -1,0 +1,7 @@
+---
+
+repo: curityio/nginx_phantom_token_module
+summary: Phantom Token NGINX Module
+description: |
+  NGINX module that introspects phantom access tokens according to RFC 7662
+soname: ngx_curity_http_phantom_token_module
