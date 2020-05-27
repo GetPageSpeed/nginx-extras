@@ -20,4 +20,4 @@ description: |
 soname: ngx_http_small_light_module
 build_requires:
   - ImageMagick-devel
-comment: EL8 uses path /usr/include/ImageMagick-6/wand/MagickWand.h and not /usr/include/ImageMagick
+comment: EL7 and EL8 uses path /usr/include/ImageMagick-6/wand/MagickWand.h, EL6 uses /usr/include/ImageMagick
