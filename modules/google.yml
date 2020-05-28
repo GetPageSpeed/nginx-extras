@@ -1,0 +1,7 @@
+---
+
+repo: GetPageSpeed/ngx_http_google_filter_module
+summary: NGINX Module for Google Mirror creation
+description: |
+  NGINX module which makes google mirror much easier to deploy
+soname: ngx_http_google_filter_module
