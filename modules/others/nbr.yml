@@ -1,0 +1,14 @@
+---
+
+repo: GetPageSpeed/ngx_brotli
+summary: NGINX Brotli dynamic modules
+description: |
+  NGINX Brotli dynamic modules
+soname:
+  - ngx_http_brotli_filter_module
+  - ngx_http_brotli_static_module
+build_requires:
+  - brotli-devel
+comment: |
+  separate build system which yields Plesk-specific packages
+  in addition to standard distribution

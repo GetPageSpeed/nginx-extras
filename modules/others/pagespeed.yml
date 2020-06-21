@@ -1,0 +1,10 @@
+---
+
+repo: apache/incubator-pagespeed-ngx
+summary: PageSpeed dynamic module for NGINX
+description: |
+  PageSpeed dynamic module for NGINX
+soname:
+  - ngx_pagespeed
+comment: |
+  separate build system which integrates PSOL library
