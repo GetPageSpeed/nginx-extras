@@ -21,20 +21,20 @@ For module authors this allows to:
 * automatic rebuilds when you tag new release of your module (within 24 hrs)
 * automatic rebuilds against newly released NGINX versions
 
-## Install any module whatsoever in CentOS/RHEL 6/7
+## Install any module whatsoever in CentOS/RHEL 6, 7, 8
 
 ### Step 1. Install repository configuration for your OS
 
-    yum install https://extras.getpagespeed.com/release-el$(rpm -E %{rhel})-latest.rpm
+    sudo yum -y install https://extras.getpagespeed.com/release-latest.rpm
 
 ### Step 2. Enable installing modules for mainline NGINX (if you must)
 
-    yum -y install yum-utils
-    yum-config-manager --enable getpagespeed-extras-mainline
+    sudo yum -y install yum-utils
+    sudo yum-config-manager --enable getpagespeed-extras-mainline
 
 ### Step 3. Install the module, e.g. cache-purge     
 
-    yum install nginx-module-cache-purge
+    sudo yum -y install nginx-module-cache-purge
 
 ## Module Requirements (for authors)
 
