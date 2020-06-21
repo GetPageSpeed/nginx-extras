@@ -1,7 +1,7 @@
 # nginx-extras
 
-The [nginx-extras project, as part of GetPageSpeed repositories](https://www.getpagespeed.com/redhat) 
-is your source of secure, well-maintained packages of NGINX and its 30+ modules.
+The [nginx-extras](https://www.getpagespeed.com/nginx-extras) project, as part of [GetPageSpeed repositories](https://www.getpagespeed.com/redhat) 
+is your source of secure, well-maintained packages of NGINX and its 50+ modules.
 
 Production-ready, quality binary RPM packages for NGINX Brotli, PageSpeed, dynamic ETags, ModSecurity modules (and many more),
 all available for installation via `yum/dnf`, giving you ability to configure your ultimate performant and secure NGINX setup.
