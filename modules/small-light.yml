@@ -4,7 +4,7 @@ repo: dvershinin/ngx_small_light
 summary: Dynamic image transformation module For NGINX
 description: |
   A dynamic image transformation module for NGINX.
-  Supports the various image processings below.
+  Supports the various image processings below:
     * Resize
     * Rotate
     * Sharpen
@@ -20,4 +20,5 @@ description: |
 soname: ngx_http_small_light_module
 build_requires:
   - ImageMagick-devel
-comment: EL7 and EL8 uses path /usr/include/ImageMagick-6/wand/MagickWand.h, EL6 uses /usr/include/ImageMagick
+comment: |
+  building off our work with generated config for CentOS
