@@ -8,3 +8,7 @@ soname:
   - ngx_pagespeed
 comment: |
   separate build system which integrates PSOL library
+ref:
+  el7: https://bit.ly/ngx-pagespeed-el
+  el8: https://bit.ly/ngx-pagespeed-el
+  amzn2: https://bit.ly/ngx-pagespeed-el

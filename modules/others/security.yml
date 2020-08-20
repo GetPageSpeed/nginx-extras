@@ -1,0 +1,18 @@
+---
+
+repo: SpiderLabs/ModSecurity-nginx
+summary: ModSecurity v3 Nginx Connector
+description: |
+  The ModSecurity-nginx connector is the connection point between nginx and libmodsecurity
+  (ModSecurity v3). Said another way, this project provides a communication channel between nginx
+  and libmodsecurity. This connector is required to use LibModSecurity with nginx.
+
+  The ModSecurity-nginx connector takes the form of an nginx module. The module simply serves as a
+  layer of communication between nginx and ModSecurity.
+soname:
+  - ngx_http_modsecurity_module
+comment: |
+  separate build system due to requirement of SELinux subpackage, at least
+ref:
+  el7: https://bit.ly/ngx-security-el7
+  el8: https://bit.ly/ngx-security-el8

@@ -1,0 +1,10 @@
+---
+
+repo: openresty/lua-nginx-module
+summary: Lua scripting support for NGINX
+description: |
+  Embed the power of Lua into Nginx HTTP Servers.
+soname:
+  - ngx_http_lua_module
+comment: |
+  separate build system due to requirement of extra NGINX-MOD build
