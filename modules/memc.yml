@@ -1,0 +1,7 @@
+---
+
+repo: openresty/memc-nginx-module
+summary: Extended version of the standard NGINX memcached module
+description: |
+  Extended version of the standard NGINX memcached module
+soname: ngx_http_memc_module
