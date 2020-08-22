@@ -1,0 +1,9 @@
+---
+
+repo: dvershinin/ngx_postgres
+summary: PostgreSQL module for NGINX
+description: |
+  Upstream module that allows NGINX to communicate directly with PostgreSQL database.
+soname: ngx_postgres_module
+build_requires:
+  - postgresql-devel
