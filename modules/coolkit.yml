@@ -1,0 +1,12 @@
+---
+
+repo: dvershinin/ngx_coolkit
+summary: NGINX CoolKit Module
+description: |
+  NGINX CoolKit is collection of small and useful NGINX add-ons.
+soname: ngx_coolkit_module
+new_directives:
+  - override_method
+new_variables:
+  - remote_passwd
+  - location
