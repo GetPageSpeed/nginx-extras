@@ -7,3 +7,5 @@ description: |
 soname: ngx_http_captcha_module
 build_requires:
   - gd-devel
+devtoolset:
+  el7: 8
