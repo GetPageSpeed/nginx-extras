@@ -1,0 +1,9 @@
+---
+
+repo: max-lt/nginx-jwt-module
+summary: NGINX JWT Module
+description: |
+  NGINX module to check for a valid JWT.
+soname: ngx_http_auth_jwt_module
+build_requires:
+  - jansson-devel
