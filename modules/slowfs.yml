@@ -1,0 +1,7 @@
+---
+
+repo: dvershinin/ngx_slowfs_cache
+summary: NGINX SlowFS Cache Module
+description: |
+  NGINX module which adds ability to cache static files.
+soname: ngx_http_slowfs_module
