@@ -1,0 +1,9 @@
+---
+
+repo: dvershinin/ngx_http_captcha_module
+summary: NGINX Captcha Module
+description: |
+  NGINX module for generate captcha and validate captcha code
+soname: ngx_http_captcha_module
+build_requires:
+  - gd-devel
