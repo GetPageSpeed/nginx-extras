@@ -1,0 +1,10 @@
+---
+
+repo: ADD-SP/ngx_waf
+summary: A web application firewall module for NGINX
+description: |
+  A web application firewall module for NGINX.
+build_requires:
+  - uthash-devel
+soname:
+  - ngx_http_waf_module
