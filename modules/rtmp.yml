@@ -1,0 +1,8 @@
+---
+
+repo: dvershinin/nginx-rtmp-module
+summary: NGINX RTMP module
+description: |
+  NGINX-based Media Streaming Server
+soname: ngx_rtmp_module
+# has an nginx-mod specific build as it depends on OpenSSL version 
