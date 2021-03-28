@@ -16,3 +16,5 @@ build_requires:
   - openssl-devel
 devtoolset:
   el7: 8
+comment: |
+  requires OpenSSL >= 1.1.1
