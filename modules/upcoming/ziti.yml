@@ -7,5 +7,6 @@ description: |
   connect and reverse-proxy to a zero-trust Ziti Network.
 soname: ngx_http_ziti_module
 release_ticket: https://github.com/openziti/ngx_http_ziti_module/issues/9
-
+comment: |
+  requires Ziti C SDK which is not yet available as a package
 
