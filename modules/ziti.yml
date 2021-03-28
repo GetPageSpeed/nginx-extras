@@ -1,0 +1,11 @@
+---
+
+repo: dvershinin/ngx_http_ziti_module
+summary: NGINX Ziti upstream module
+description: |
+  Non-blocking upstream module for Nginx allowing it to securely
+  connect and reverse-proxy to a zero-trust Ziti Network.
+soname: ngx_http_ziti_module
+release_ticket: https://github.com/openziti/ngx_http_ziti_module/issues/9
+
+
