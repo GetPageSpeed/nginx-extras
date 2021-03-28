@@ -13,5 +13,6 @@ build_requires:
   - libcurl-devel
   - jansson-devel
   - libjwt-devel
+  - openssl-devel
 devtoolset:
   el7: 8
