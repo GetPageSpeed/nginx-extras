@@ -1,0 +1,12 @@
+---
+
+repo: dvershinin/ngx_http_js_challenge_module
+summary: NGINX Javascript challenge module
+description: |
+  Similar to Cloudflare's anti-DDoS feature.
+
+  Simple javascript proof-of-work based access for NGINX with
+  virtually no overhead.
+
+soname: ngx_http_js_challenge_module
+release_ticket: https://github.com/simon987/ngx_http_js_challenge_module/issues/4

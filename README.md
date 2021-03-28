@@ -63,10 +63,13 @@ description: |
 soname: ngx_http_srcache_filter_module
 ```
 
-* `repo`: GitHub repository in format `<owner>/<name>`
+* `repo` (required): GitHub repository in format `<owner>/<name>`
 * `summary`: short (up to 70 characters) summary of the module
 * `description`: longer description of the module
-* `soname`: basename of dynamic module filename
+* `soname` (required): basename of dynamic module filename
+* `release_ticket`: a URL to the original GitHub project, requesting to tag a release. 
+  This is the way to link back to the original project when we have to fork it for the sake of packaging or
+  including important fixes 
 * `build_requires` allows you to specify external devel library dependencies, e.g.:
 
 ```yml 
