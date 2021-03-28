@@ -1,0 +1,11 @@
+---
+
+repo: dvershinin/nginx-cloudflare-jwt-checker
+summary: NGINX Auth JWT module for Cloudflare Access
+description: |
+  This is an NGINX module based on that of TeslaGov, which was
+  extended to work with Cloudflare's Access Service, which mandates
+  the verification of JWTs in order to properly authenticate
+  requests made through Access.
+soname: ngx_http_jwt_cf_module
+release_ticket: https://github.com/TomFahey/nginx-cloudflare-jwt-checker/issues/2
