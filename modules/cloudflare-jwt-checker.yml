@@ -9,3 +9,5 @@ description: |
   requests made through Access.
 soname: ngx_http_jwt_cf_module
 release_ticket: https://github.com/TomFahey/nginx-cloudflare-jwt-checker/issues/2
+build_requires:
+  - libcurl-devel
