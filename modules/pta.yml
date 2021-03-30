@@ -1,6 +1,6 @@
 ---
 
-repo: dvershinin/ngx_http_ziti_module
+repo: dvershinin/pta
 summary: Period of Time Authentication module for NGINX
 description: |
   PTA (Period of Time Authentication) module is a module for NGINX.
