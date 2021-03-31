@@ -1,6 +1,6 @@
 ---
 
-repo: dvershinin/pta
+repo: iij/pta
 summary: Period of Time Authentication module for NGINX
 description: |
   PTA (Period of Time Authentication) module is a module for NGINX.
@@ -8,5 +8,5 @@ description: |
   a encrypted query string that includes an expiration time and a
   path of the content.
 soname: ngx_http_pta_module
-release_ticket: https://github.com/iij/pta/issues/9
+
 
