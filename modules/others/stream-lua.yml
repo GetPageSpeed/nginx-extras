@@ -1,0 +1,10 @@
+---
+
+repo: openresty/stream-lua-nginx-module
+summary: Lua scripting support for NGINX streams
+description: |
+  Embed the power of Lua into Nginx stream/TCP Servers.
+soname:
+  - ngx_stream_lua_module
+comment: |
+  separate build system due to requirement of NDK and extra NGINX-MOD build
