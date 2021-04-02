@@ -19,3 +19,5 @@ build_requires:
   - ruby-devel
   - libcurl-devel
 config_dirname: src/nginx_module
+devtoolset:
+  el6: 8
