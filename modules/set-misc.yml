@@ -1,0 +1,10 @@
+---
+
+repo: openresty/set-misc-nginx-module
+summary: NGINX Set-Misc module
+description: |
+  Various set_xxx directives added to NGINX's rewrite module
+  (md5/sha1, sql/json quoting, and many more).
+soname: ngx_http_set_misc_module
+requires:
+  - nginx-module-ndk
