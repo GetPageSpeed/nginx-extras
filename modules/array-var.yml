@@ -5,7 +5,5 @@ summary: Array-typed variables for NGINX
 description: |
   Adds support for array-typed variables to NGINX config files.
 soname: ngx_http_array_var_module
-
-
-
-
+requires:
+  - nginx-module-ndk

@@ -4,7 +4,7 @@ repo: calio/iconv-nginx-module
 summary: NGINX iconv module
 description: |
   This is NGINX module that uses libiconv to convert characters of
-  different encoding. It brings the 'set_iconv' command to NGINX.
+  different encoding. It brings 'set_iconv' command to NGINX.
 soname: ngx_http_iconv_module
 requires:
   - nginx-module-ndk
