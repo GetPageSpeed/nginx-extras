@@ -1,0 +1,9 @@
+---
+
+repo: openresty/encrypted-session-nginx-module
+summary:  Encrypt and decrypt NGINX variable values
+description: |
+  NGINX module to encrypt and decrypt NGINX variable values.
+soname: ngx_http_encrypted_session_module
+requires:
+  - nginx-module-ndk
