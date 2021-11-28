@@ -1,0 +1,4 @@
+lastversion
+PyGithub
+tabulate
+pickledb

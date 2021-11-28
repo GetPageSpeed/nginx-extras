@@ -1,0 +1,9 @@
+---
+
+repo: dvershinin/nginx-log-zmq
+summary: ZeroMQ logger module for NGINX
+description: |
+  ZeroMQ logger module for NGINX
+soname: ngx_http_log_zmq_module
+build_requires:
+  - zeromq-devel
