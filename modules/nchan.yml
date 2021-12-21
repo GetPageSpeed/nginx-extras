@@ -20,3 +20,6 @@ description: |
 soname: ngx_nchan_module
 devtoolset:
   el7: 8
+# recent versions introduced warning:
+# src/store/redis/redis_nodeset.c:219:16: error: unused variable 'ciphers' [-Werror=unused-variable]
+cc_opt: "-Wno-error"
