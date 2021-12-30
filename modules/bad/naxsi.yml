@@ -24,3 +24,4 @@ description: |
   properly.
 soname: ngx_http_naxsi_module
 config_dirname: naxsi_src
+comment: https://github.com/nbs-system/naxsi/issues/580
