@@ -3,6 +3,6 @@
 repo: dvershinin/nginx-json-var-module
 summary: NGINX JSON variables module
 description: |
-  Adds the ability to group NGINX variable expressions as JSON.
+  Module adds the ability to group NGINX variable expressions as JSON.
 soname: ngx_http_json_var_module
 
