@@ -1,6 +1,6 @@
 ---
 
-repo: nbs-system/naxsi
+repo: dvershinin/naxsi
 summary: NGINX Anti XSS & SQL Injection module
 description: |
   NAXSI is an open-source, high performance, low rules
