@@ -9,3 +9,6 @@ description: |
 
   This is similar to the live activity monitoring of NGINX Plus
 soname: ngx_http_vhost_traffic_status_module
+# https://github.com/vozlt/nginx-module-vts/issues/223
+# Fedora 35 has it
+cc_opt: "-Wno-error"
