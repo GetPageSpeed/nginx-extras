@@ -14,10 +14,17 @@ description: |
   being used by high-profile companies such as Apple, Pixar, New York
   Times, AirBnB, Juniper etc as well as over 650.000 websites.
 soname: ngx_http_passenger_module
+# We support 2.6 ruby and above for custom built passenger 6 because that's what
+# modern apps like Redmine at lest require ...
+build_requires_repos:
+  amzn2: ruby26-passenger6 # holds passenger 6 built against Ruby 2.6, not Ruby itself (can get from Amazon)
+  el7: ruby26-passenger6 # Passenger 6 built against Ruby 2.6 SCL
+  # plesk sub-repo for EL7 also holds Passenger 6 built with openssl11-devel (priority)
 build_requires:
   - rubygem-rake
   - ruby-devel
   - libcurl-devel
+  - passenger-devel
 config_dirname: src/nginx_module
 sticky_version:
   el6:
