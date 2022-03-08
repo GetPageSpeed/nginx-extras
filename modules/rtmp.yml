@@ -5,5 +5,5 @@ summary: NGINX RTMP module
 description: |
   NGINX-based Media Streaming Server
 soname: ngx_rtmp_module
-has_selinux_package: 1
+selinux_package: https://github.com/dvershinin/nginx-rtmp-module/blob/master/nginx-module-rtmp.te
 # has an nginx-mod specific build as it depends on OpenSSL version
