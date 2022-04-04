@@ -9,3 +9,7 @@ build_requires:
   - gd-devel
 devtoolset:
   el7: 8
+ref:
+  el7: https://bit.ly/nginx-captcha-el
+  el8: https://bit.ly/nginx-captcha-el
+  amzn2: https://bit.ly/nginx-captcha-el
