@@ -1,0 +1,8 @@
+---
+
+summary: NGINX Perl dynamic module
+description: |
+  NGINX Perl dynamic module
+soname: ngx_http_perl_module
+directives_url: https://nginx.org/en/docs/http/ngx_http_perl_module.html#directives
+

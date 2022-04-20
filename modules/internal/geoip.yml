@@ -1,0 +1,10 @@
+---
+
+summary: NGINX GeoIP dynamic modules
+description: |
+  NGINX GeoIP dynamic modules.
+  Uses legacy GeoIP data format, discouraged from use in favor of nginx-module-geoip2
+soname:
+  - ngx_http_geoip_module
+  - ngx_stream_geoip_module
+directives_url: http://nginx.org/en/docs/http/ngx_http_geoip_module.html#directives

@@ -1,0 +1,15 @@
+---
+
+repo: nginx/njs
+summary: NGINX njs dynamic modules
+description: |
+  NGINX njs dynamic modules
+build_requires:
+  - libedit-devel
+soname:
+  - ngx_http_js_module
+  - ngx_stream_js_module
+directives_url:
+  - http://nginx.org/en/docs/http/ngx_http_js_module.html
+  - http://nginx.org/en/docs/stream/ngx_stream_js_module.html
+comment: extra step for cli app

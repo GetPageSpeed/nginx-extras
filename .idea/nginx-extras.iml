@@ -8,5 +8,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="nginx-modules" />
     <orderEntry type="module" module-name="scripts" />
+    <orderEntry type="module" module-name="yml2spec-nginx-module" />
   </component>
 </module>

@@ -1,0 +1,8 @@
+---
+
+summary: NGINX XSLT dynamic module
+description: |
+  NGINX XSLT dynamic module
+soname: ngx_http_xslt_filter_module
+directives_url: https://nginx.org/en/docs/http/ngx_http_xslt_module.html#directives
+
