@@ -1,8 +1,6 @@
 ---
 
-# repo: winshining/nginx-http-flv-module
-# rebased due to unreleased fix: https://github.com/winshining/nginx-http-flv-module/commit/e95f4d9baca9d6884c48ea5d7b32eba96e5574b8
-repo: dvershinin/nginx-http-flv-module
+repo: winshining/nginx-http-flv-module
 summary: Media streaming server based on nginx-module-rtmp
 description: |
   Media streaming server based on nginx-module-rtmp.
