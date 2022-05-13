@@ -13,5 +13,5 @@ description: |
   (by location / server / user-defined-variables).
 soname:
   - ngx_http_accounting_module
-# - ngx_stream_accounting_module
+## - ngx_stream_accounting_module
 comment: rebased to own fork for tagging releases because upstream does not anymore
