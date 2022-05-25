@@ -22,3 +22,5 @@ build_requires:
   - ImageMagick-devel
 comment: |
   building off our work with generated config for CentOS
+# el8 /usr/include/ImageMagick-6/magick/pixel-accessor.h:220:15: error: type qualifiers ignored on function return type [-Werror=ignored-qualifiers]
+cc_opt: "-Wno-error"
