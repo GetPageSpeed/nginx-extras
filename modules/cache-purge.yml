@@ -1,6 +1,6 @@
 ---
 
-repo: novashdima/ngx_cache_purge
+repo: nginx-modules/ngx_cache_purge
 summary: NGINX Cache Purge module
 description: |
   NGINX module which adds ability to purge content from FastCGI, proxy,
