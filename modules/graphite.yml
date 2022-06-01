@@ -1,9 +1,9 @@
 ---
 
 repo: mailru/graphite-nginx-module 
-summary: An nginx module for collecting stats into Graphite
+summary: An NGINX module for collecting stats into Graphite
 description: |
-  An nginx module for collecting location stats into Graphite.
+  An NGINX module for collecting location stats into Graphite.
 soname: ngx_http_graphite_module
 # graphite-nginx-module-3.1/src/ngx_http_graphite_module.c: In function 'ngx_http_graphite_get_source':
 # graphite-nginx-module-3.1/src/ngx_http_graphite_module.c:1963:13: error: passing argument 2 of 'ngx_regex_exec' discards 'const' qualifier from pointer target type [-Werror]
