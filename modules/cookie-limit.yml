@@ -9,4 +9,5 @@ description: |
 soname: ngx_http_cookie_limit_req_module
 build_requires:
   - hiredis-devel
-comment: https://github.com/limithit/ngx_cookie_limit_req_module/issues/3
+comment:
+  - https://github.com/limithit/ngx_cookie_limit_req_module/issues/3

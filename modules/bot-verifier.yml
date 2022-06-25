@@ -19,3 +19,5 @@ description: |
 soname: ngx_http_bot_verifier_module
 build_requires:
   - hiredis-devel
+only_on_branch: stable
+comment: https://github.com/repsheet/ngx_bot_verifier/issues/17
