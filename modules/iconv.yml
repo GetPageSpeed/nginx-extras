@@ -8,5 +8,11 @@ description: |
 soname: ngx_http_iconv_module
 requires:
   - nginx-module-ndk
-build_requires:
-  - glibc-headers
+#build_requires:
+#  - glibc-headers
+build_requires_raw: |
+  %if 0%{?suse_version}
+  BuildRequires: glibc-devel
+  %else
+  BuildRequires: glibc-headers
+  %endif
