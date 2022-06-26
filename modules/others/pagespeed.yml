@@ -7,7 +7,8 @@ description: |
 soname:
   - ngx_pagespeed
 comment: |
-  separate build system which integrates PSOL library
+  separate build system which integrates PSOL library,
+  NGINX v1.23.0 fix added via headers.patch
 ref:
   el7: https://bit.ly/ngx-pagespeed-el
   el8: https://bit.ly/ngx-pagespeed-el
