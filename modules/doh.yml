@@ -9,3 +9,5 @@ description: |
   successfully with both Firefox and Curl, there may be undiscovered bugs.
   Zone transfer is currently not officially supported.
 soname: ngx_http_doh_module
+patches:
+  - https://github.com/dvershinin/Nginx-DOH-Module/commit/2c6c611157489f21962ffe92a032f6e536a0227c.diff
