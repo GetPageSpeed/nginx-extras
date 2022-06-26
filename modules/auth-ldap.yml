@@ -11,8 +11,14 @@ description: |
   and reference commit 83c059b73566c2ee9cbda920d91b66657cf120b7
   if requested, not the version of the package.
 soname: ngx_http_auth_ldap_module
-build_requires:
-  - openldap-devel
+# build_requires:
+#  - openldap-devel
+build_requires_raw: |
+  %if 0%{?suse_version}
+  BuildRequires: openldap2-devel
+  %else
+  BuildRequires: openldap-devel
+  %endif
 comment: |
   commit-based releases not yet supported, and upstream did not tag
   anything in years, so we tag own releases in our fork

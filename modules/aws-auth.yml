@@ -6,3 +6,5 @@ description: |
   This NGINX module can proxy requests to authenticated S3 backends
   using Amazon's V4 authentication API.
 soname: ngx_http_aws_auth_module
+# on EL9: ngx_aws_auth-2.1.1/crypto_helper_openssl.c:45:5: error: 'SHA256_Final' is deprecated: Since OpenSSL 3.0 [-Werror=deprecated-declarations]
+cc_opt: "-Wno-error"
