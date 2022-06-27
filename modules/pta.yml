@@ -8,5 +8,5 @@ description: |
   a encrypted query string that includes an expiration time and a
   path of the content.
 soname: ngx_http_pta_module
-
+comment: https://github.com/iij/pta/issues/10
 
