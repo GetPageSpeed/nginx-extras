@@ -24,7 +24,7 @@ description: |
   properly.
 soname: ngx_http_naxsi_module
 config_dirname: naxsi_src
-comment: https://github.com/nbs-system/naxsi/issues/580
+comment: https://github.com/nbs-system/naxsi/issues/580 and https://github.com/nbs-system/naxsi/issues/597
 push_files:
   - from: "naxsi_config/naxsi_core.rules"
     to: "%{_datadir}/nginx/naxsi/naxsi_core.rules"
@@ -32,3 +32,5 @@ push_files:
     type: "%config(noreplace)"
 owns_dirs:
    - "%{_datadir}/nginx/naxsi"
+patches:
+  - https://github.com/dvershinin/naxsi/commit/433159440f7eb807926b7e0992cad81e22e309ee.diff
