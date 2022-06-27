@@ -4,5 +4,5 @@ repo: GetPageSpeed/ngx_security_headers
 summary: NGINX module for sending security headers
 description: |
   This NGINX module adds security headers and removes insecure headers
-  easily
+  easily and according to HTTP specifications
 soname: ngx_http_security_headers_module
