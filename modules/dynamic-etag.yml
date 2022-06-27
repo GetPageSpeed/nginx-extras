@@ -7,5 +7,5 @@ description: |
   header. It allows client browsers to issue conditional GET requests
   to dynamic pages.
 
-  And thus saves bandwidth and ensures better performance!
+  This saves bandwidth and ensures better performance!
 soname: ngx_http_dynamic_etag_module

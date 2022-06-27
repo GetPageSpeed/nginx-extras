@@ -3,7 +3,7 @@
 repo: AirisX/nginx_cookie_flag_module
 summary: NGINX cookie flag module
 description: |
-  This module for NGINX allows to set the flags "HttpOnly", "secure"
+  This NGINX module allows to set the flags "HttpOnly", "secure"
   and "SameSite" for cookies in the "Set-Cookie" upstream response
   headers.
 
