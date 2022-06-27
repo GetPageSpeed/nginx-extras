@@ -32,5 +32,3 @@ push_files:
     type: "%config(noreplace)"
 owns_dirs:
    - "%{_datadir}/nginx/naxsi"
-patches:
-  - https://github.com/dvershinin/naxsi/commit/433159440f7eb807926b7e0992cad81e22e309ee.diff
