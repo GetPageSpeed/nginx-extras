@@ -1,6 +1,6 @@
 ---
 
-repo: openresty/srcache-nginx-module
+repo: dvershinin/srcache-nginx-module
 summary: Transparent subrequest-based caching layout for arbitrary NGINX locations
 description: |
   This module provides a transparent caching layer for arbitrary NGINX
@@ -9,3 +9,4 @@ description: |
 
   The caching behavior is mostly compatible with RFC 2616.
 soname: ngx_http_srcache_filter_module
+comment: release waiting tag
