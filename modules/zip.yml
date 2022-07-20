@@ -1,6 +1,6 @@
 ---
 
-repo: evanmiller/mod_zip
+repo: dvershinin/mod_zip
 summary: Streaming ZIP archiver for NGINX
 description: |
   mod_zip assembles ZIP archives dynamically. It can stream component
