@@ -5,5 +5,3 @@ summary: Phantom Token NGINX Module
 description: |
   NGINX module that introspects phantom access tokens according to RFC 7662
 soname: ngx_curity_http_phantom_token_module
-patches:
-  - https://patch-diff.githubusercontent.com/raw/curityio/nginx_phantom_token_module/pull/60.diff
