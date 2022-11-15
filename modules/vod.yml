@@ -1,0 +1,15 @@
+---
+
+repo: kaltura/nginx-vod-module
+summary: NGINX-based VOD Packager
+description: |
+  On-the-fly repackaging of MP4 files to DASH, HDS, HLS, MSS.
+soname: ngx_http_vod_module
+build_requires:
+  - libxml2-devel
+build_requires_raw: |
+  %if 0%{?suse_version}
+  BuildRequires: glibc-devel
+  %else
+  BuildRequires: glibc-headers
+  %endif
