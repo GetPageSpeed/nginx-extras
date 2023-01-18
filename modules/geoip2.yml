@@ -6,6 +6,8 @@ description: |
   NGINX module which creates variables with values from the MaxMind
   geoip2 databases. based on the client IP (default) or from a
   specific variable (supports both IPv4 and IPv6)
-soname: ngx_http_geoip2_module
+soname:
+  - ngx_http_geoip2_module
+  - ngx_stream_geoip2_module
 build_requires:
   - libmaxminddb-devel
