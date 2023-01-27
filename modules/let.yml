@@ -1,0 +1,7 @@
+---
+
+repo: dvershinin/nginx-let-module
+summary: NGINX let module
+description: |
+  Adds support for arithmetic operations to NGINX config.
+soname: ngx_http_let_module
