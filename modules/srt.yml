@@ -1,0 +1,10 @@
+---
+
+repo: kaltura/nginx-srt-module
+summary: Nginx SRT Module
+description: |
+  Haivision SRT (Secure Reliable Transfer) / TCP gateway. 
+  Supports both SRT to TCP and TCP to SRT, including bidirectional data transfer.
+soname: ngx_srt_module
+build_requires:
+  - srt-devel
