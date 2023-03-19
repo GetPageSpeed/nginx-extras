@@ -8,10 +8,4 @@ description: |
   HTTP-FLV, GOP cache and VHOST (one IP for multi domain names)
   are supported now.
 soname: ngx_http_flv_live_module
-
-
-
-
-
-
-
+cc_opt: "-fno-strict-aliasing"
