@@ -5,3 +5,4 @@ summary: NGINX push stream module
 description: |
   A pure stream HTTP push technology for your NGINX setup
 soname: ngx_http_push_stream_module
+comment: https://github.com/wandenberg/nginx-push-stream-module/issues/306
