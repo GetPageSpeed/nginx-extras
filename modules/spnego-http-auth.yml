@@ -1,0 +1,10 @@
+---
+
+repo: stnoonan/spnego-http-auth-nginx-module
+summary: Nginx module for HTTP SPNEGO auth
+description: |
+  This module implements adds SPNEGO support to NGINX. 
+  It currently supports only Kerberos authentication via GSSAPI.
+soname: ngx_http_auth_spnego_module
+build_requires:
+  - krb5-devel

@@ -1,0 +1,11 @@
+---
+
+repo: arut/nginx-dav-ext-module
+summary: NGINX WebDAV PROPFIND,OPTIONS,LOCK,UNLOCK support
+description: |
+  For full WebDAV support in nginx you need to use the standard 
+  ngx_http_dav_module as well as this module for the missing methods.
+soname: ngx_http_dav_ext_module
+build_requires:
+  - libxml2-devel
+  - libxslt-devel

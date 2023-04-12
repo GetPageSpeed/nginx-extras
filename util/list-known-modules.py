@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import pickledb
 
-db = pickledb.load('known.db', False)
+db = pickledb.load('known.db.json', False)
 
 all = []
 for k in db.getall():

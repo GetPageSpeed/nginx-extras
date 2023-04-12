@@ -1,0 +1,12 @@
+---
+
+repo: dvershinin/xss-nginx-module
+summary: Native cross-site scripting support in NGINX
+description: |
+  This module adds cross-site AJAX support to NGINX. 
+  Currently only cross-site GET is supported. 
+  But cross-site POST will be added in the future.
+
+  The cross-site GET is currently implemented as JSONP (or "JSON with padding"). 
+  See http://en.wikipedia.org/wiki/JSON#JSONP for more details.
+soname: ngx_http_xss_filter_module

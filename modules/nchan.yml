@@ -23,3 +23,6 @@ devtoolset:
 # recent versions introduced warning:
 # src/store/redis/redis_nodeset.c:219:16: error: unused variable 'ciphers' [-Werror=unused-variable]
 cc_opt: "-Wno-error"
+patches: []
+  # the patch was merged upstream in v1.3.6
+  # - https://patch-diff.githubusercontent.com/raw/slact/nchan/pull/652.diff

@@ -1,0 +1,7 @@
+---
+
+repo: atomx/nginx-http-auth-digest
+summary: Digest Authentication for NGINX
+description: |
+  Digest Authentication for NGINX.
+soname: ngx_http_auth_digest_module

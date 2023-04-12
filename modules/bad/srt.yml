@@ -1,0 +1,13 @@
+---
+
+repo: kaltura/nginx-srt-module
+summary: Nginx SRT Module
+description: |
+  Haivision SRT (Secure Reliable Transfer) / TCP gateway. 
+  Supports both SRT to TCP and TCP to SRT, including bidirectional data transfer.
+soname: ngx_srt_module
+build_requires:
+  - srt-devel
+comment: |
+  requires newer than the stock srt-devel package in CentOS 7
+  error: implicit declaration of function 'srt_listen_callback' [-Werror=implicit-function-declaration]
