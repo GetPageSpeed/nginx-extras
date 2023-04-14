@@ -1,6 +1,6 @@
 ---
 
-repo: dvershinin/ngx_http_captcha_module
+repo: RekGRpth/ngx_http_captcha_module
 summary: NGINX Captcha Module
 description: |
   NGINX module for generate captcha and validate captcha code
@@ -16,4 +16,3 @@ ref:
 requires:
   - nginx-module-form-input
   - nginx-module-set-misc
-comment: requested upstream to tag release versions (by email), no response yet
