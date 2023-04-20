@@ -6,3 +6,6 @@ description: |
   A pure stream HTTP push technology for your NGINX setup
 soname: ngx_http_push_stream_module
 comment: https://github.com/wandenberg/nginx-push-stream-module/issues/306
+patches:
+  - https://github.com/wandenberg/nginx-push-stream-module/commit/8c02220d484d7848bc8e3a6d9b1c616987e86f66.diff
+  - https://github.com/wandenberg/nginx-push-stream-module/commit/f858fc01e809bc87cc667e1cdd38fc35492cd2f5.diff
