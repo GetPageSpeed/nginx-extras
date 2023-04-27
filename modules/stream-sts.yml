@@ -1,0 +1,7 @@
+---
+
+repo: vozlt/nginx-module-stream-sts
+summary: Nginx stream server traffic status core module
+description: |
+  Nginx stream server traffic status core module.
+soname: ngx_stream_server_traffic_status_module
