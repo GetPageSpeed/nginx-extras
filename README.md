@@ -1,5 +1,7 @@
 # nginx-extras
 
+![CircleCI](https://circleci.com/gh/GetPageSpeed/repotest.svg?style=shield&circle-token=db54937e3be24afebb2520f2c59ecb65a848900d)
+
 The [nginx-extras](https://www.getpagespeed.com/nginx-extras) project, as part of [GetPageSpeed repositories](https://www.getpagespeed.com/redhat) 
 is your source of secure, well-maintained packages of NGINX and its 50+ modules.
 
@@ -15,13 +17,20 @@ For sysadmins this allows to:
 * save time, any module can be installed in seconds
 * save production systems from pollution by compilation software
 
-For module authors this allows to:
+For module authors, this allows to:
 
 * deliver your module as installable package *in ten minutes*
 * automatic rebuilds when you tag new release of your module (within 24 hrs)
 * automatic rebuilds against newly released NGINX versions
 
-## Install any module whatsoever in CentOS/RHEL 6, 7, 8
+## Install any NGINX module whatsoever in any RPM-based distro
+
+We provide NGINX module RPM packages for:
+
+* CentOS/RHEL
+* Fedora Linux (and this one is free)
+* Amazon Linux
+* Suse Linux
 
 ### Step 1. Install repository configuration for your OS
 
@@ -38,7 +47,7 @@ For module authors this allows to:
 
 ## Module Requirements (for authors)
 
-The module requirements are pretty straightforward and most of module repositories already follow it:
+The module requirements are pretty straightforward, and most of the module repositories already follow it:
 
 * Hosted on GitHub
 * Tag releases with sane version numbers. Repositories without any version tag can't build. Pre-releases / beta versions are detected and *not* built
