@@ -1,6 +1,6 @@
 ---
 
-repo: wargio/naxsi
+repo: dvershinin/naxsi
 summary: NGINX Anti XSS & SQL Injection module
 description: |
   NAXSI is an open-source, high performance, low rules
@@ -31,3 +31,4 @@ push_files:
     type: "%config(noreplace)"
 owns_dirs:
    - "%{_datadir}/nginx/naxsi"
+comment: https://github.com/wargio/naxsi/issues/79
