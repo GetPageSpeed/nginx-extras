@@ -1,9 +1,0 @@
----
-
-repo: ogarrett/nginx-fips-check-module
-summary: FIPS status check module for NGINX
-description: |
-  This module applies to NGINX builds that use OpenSSL for SSL/TLS crypto. 
-  It runs after NGINX startup and queries the OpenSSL library, reporting if 
-  the library is in FIPS mode or not.
-soname: ngx_fips_check_module
