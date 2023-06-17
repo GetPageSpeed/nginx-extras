@@ -1,0 +1,15 @@
+---
+
+repo: ogarrett/nginx-fips-check-module
+summary: FIPS status check module for NGINX
+description: |
+  This module applies to NGINX builds that use OpenSSL for SSL/TLS crypto. 
+  It runs after NGINX startup and queries the OpenSSL library, reporting if 
+  the library is in FIPS mode or not.
+soname: ngx_fips_check_module
+comment: |
+  starting with NGINX 1.25.1 fails to compile like so:
+  nginx-fips-check-module-0.1/ngx_core_fips_check_module.c: In function 'ngx_fips_check':
+  nginx-fips-check-module-0.1/ngx_core_fips_check_module.c:50:16: error: implicit declaration of function 'FIPS_mode' [-Werror=implicit-function-declaration]
+     50 |     int mode = FIPS_mode();
+        |                ^~~~~~~~~
