@@ -6,7 +6,7 @@ description: |
   NGINX module to check for a valid JWT.
 soname: ngx_http_auth_jwt_module
 build_requires:
-  - jansson-devel
-  - libjwt-devel
+  - pkgconfig(jansson)
+  - pkgconfig(libjwt)
 devtoolset:
   el7: 8
