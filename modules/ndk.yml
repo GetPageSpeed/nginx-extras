@@ -3,7 +3,7 @@
 repo: vision5/ngx_devel_kit
 summary: Nginx Development Kit
 description: |
-  Nginx module that adds additional generic tools that module
+  NGINX module that adds additional generic tools that module
   developers can use in their own modules
 soname: ndk_http_module
 cc_opt: "-DNDK_SET_VAR -DNDK_UPSTREAM_LIST"
