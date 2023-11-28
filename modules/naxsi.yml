@@ -31,4 +31,4 @@ push_files:
     type: "%config(noreplace)"
 owns_dirs:
    - "%{_datadir}/nginx/naxsi"
-comment: https://github.com/wargio/naxsi/issues/79
+comment: dvershinin fork has libinjection dependency in archive
