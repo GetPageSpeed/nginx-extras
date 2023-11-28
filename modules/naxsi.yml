@@ -32,3 +32,5 @@ push_files:
 owns_dirs:
    - "%{_datadir}/nginx/naxsi"
 comment: dvershinin fork has libinjection dependency in archive
+# Fix for naxsi-1.6/naxsi_src/naxsi_utils.c:1219:3: error: 'for' loop initial declarations are only allowed in C99 mode
+cc_opt: "-std=c99"
