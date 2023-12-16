@@ -7,3 +7,5 @@ description: |
 soname: ngx_http_json_module
 requires:
   - nginx-module-ndk
+build_requires:
+  - pkgconfig(jansson)
