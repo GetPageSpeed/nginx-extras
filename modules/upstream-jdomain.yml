@@ -4,4 +4,4 @@ repo: nicholaschiasson/ngx_upstream_jdomain
 summary: Asynchronous domain name resolution module for NGINX upstream
 description: Asynchronous domain name resolution module for NGINX upstream
 soname: ngx_http_upstream_jdomain_module
-cc_opt: "-std=c99"
+cc_opt: "-std=c99 -Wno-error"
