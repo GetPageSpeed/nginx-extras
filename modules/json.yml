@@ -3,7 +3,7 @@
 repo: dvershinin/ngx_http_json_module
 summary: NGINX JSON module
 description: |
-  Dumps (json) variable $json into (string) variable $string
+  Dumps json variable $json into string variable $string
 soname: ngx_http_json_module
 requires:
   - nginx-module-ndk
