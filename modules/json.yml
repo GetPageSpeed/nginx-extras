@@ -9,3 +9,4 @@ requires:
   - nginx-module-ndk
 build_requires:
   - pkgconfig(jansson)
+cc_opt: "-std=c99"
