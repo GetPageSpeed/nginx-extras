@@ -1,0 +1,7 @@
+---
+
+repo: 61131/nginx-http-est
+summary: Enrollment over Secure Transport module for Nginx
+description: |
+  Enrollment over Secure Transport (EST) module for Nginx.
+soname: ngx_http_est_module
