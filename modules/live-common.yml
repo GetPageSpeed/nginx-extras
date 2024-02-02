@@ -1,0 +1,11 @@
+---
+
+repo: kaltura/media-framework
+summary: Kaltura Media Framework Common Module
+description: |
+  Shared module for exposing an HTTP API, sending HTTP events, 
+  parsing JSON, KMP/KSMP definitions, etc., used by most 
+  Kaltura Media Framework NGINX modules.
+soname: ngx_http_api_module
+config_dirname: nginx-common
+# cc_opt: "-std=c99"
