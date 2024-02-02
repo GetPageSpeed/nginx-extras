@@ -41,4 +41,3 @@ for q in queries:
 
         db.set(repo.full_name, {'module': is_nginx_module})
         db.dump()
-
