@@ -9,5 +9,3 @@ soname:
   - ngx_http_zstd_static_module
 build_requires:
   - libzstd-devel
-# https://github.com/tokers/zstd-nginx-module/issues/27
-cc_opt: "-Wno-error"
