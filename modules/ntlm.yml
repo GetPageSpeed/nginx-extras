@@ -1,0 +1,7 @@
+---
+
+repo: dvershinin/nginx-ntlm-module
+summary: NTLM NGINX Module
+description: |
+  NGINX NTLM module allows proxying requests with NTLM Authentication
+soname: ngx_http_upstream_ntlm_module
