@@ -52,7 +52,9 @@ for full_repo_name in db.getall():
     )
 
 tabulated = tabulate(
-    nonpackages_modules_table_entries, headers=["Name", "Description", "Stars"]
+    nonpackages_modules_table_entries,
+    headers=["Name", "Description", "Stars"],
+    tablefmt="github",
 )
 
 with open(OUTPUT_MD, "w") as nonpackages_modules_f:
