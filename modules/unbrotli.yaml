@@ -1,0 +1,10 @@
+---
+
+repo: dvershinin/ngx_unbrotli
+summary: Decompresses Brotli-encoded responses for clients that do not support it
+description: |
+  The ngx_unbrotli module is a filter that decompresses responses with
+  Content-Encoding: br for clients that do not support Brotli encoding method.
+soname: ngx_http_unbrotli_filter_module
+build_requires:
+  - brotli-devel

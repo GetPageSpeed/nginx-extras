@@ -9,7 +9,7 @@ Production-ready, quality binary RPM packages for NGINX Brotli, PageSpeed, dynam
 all available for installation via `yum/dnf`, giving you ability to configure your ultimate performant and secure NGINX setup.
 
 Available by [subscription](https://www.getpagespeed.com/repo-subscribe), 
-it is a budget Nginx Plus alternative, for CentOS/RHEL!
+it is a budget NGINX Plus alternative, for any RPM-based distro!
 
 For sysadmins this allows to:
 
@@ -23,12 +23,17 @@ For module authors, this allows to:
 * automatic rebuilds when you tag new release of your module (within 24 hrs)
 * automatic rebuilds against newly released NGINX versions
 
+## Supported architectures
+
+* x86_64
+* aarch64 (ARM64)
+
 ## Install any NGINX module whatsoever in any RPM-based distro
 
 We provide NGINX module RPM packages for:
 
 * CentOS/RHEL
-* Fedora Linux (and this one is free)
+* Fedora Linux (**and this one is free**)
 * Amazon Linux
 * Suse Linux
 
@@ -44,6 +49,11 @@ We provide NGINX module RPM packages for:
 ### Step 3. Install the module, e.g. cache-purge     
 
     sudo yum -y install nginx-module-cache-purge
+
+## Request a module
+
+The list of modules we discovered on GitHub but haven't yet tested or packaged is [here](docs/nonpackaged-modules.md). 
+You can open a ticket/issue to request packaging of any of those.
 
 ## Module Requirements (for authors)
 
