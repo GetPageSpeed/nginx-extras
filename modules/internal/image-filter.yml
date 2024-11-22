@@ -5,5 +5,9 @@ description: |
   NGINX image filter dynamic module
 soname: ngx_http_image_filter_module
 directives_url: https://nginx.org/en/docs/http/ngx_http_image_filter_module.html#directives
-
-
+configure_arguments: --with-http_image_filter_module=dynamic
+epel_name: nginx-mod-http-image-filter
+build_requires:
+  - gd-devel
+requires:
+  - gd

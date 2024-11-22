@@ -5,4 +5,15 @@ description: |
   NGINX Perl dynamic module
 soname: ngx_http_perl_module
 directives_url: https://nginx.org/en/docs/http/ngx_http_perl_module.html#directives
-
+configure_arguments: --with-http_perl_module=dynamic
+build_requires_raw: |
+  %if 0%{?suse_version} >= 1315
+  BuildRequires: perl
+  %else
+  BuildRequires: perl-devel
+  BuildRequires: perl-ExtUtils-Embed
+  %endif
+requires:
+  - |
+    perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
+epel_name: nginx-mod-http-perl

@@ -5,4 +5,6 @@ description: |
   NGINX XSLT dynamic module
 soname: ngx_http_xslt_filter_module
 directives_url: https://nginx.org/en/docs/http/ngx_http_xslt_module.html#directives
-
+configure_arguments: --with-http_xslt_module=dynamic
+build_requires:
+  - libxslt-devel
