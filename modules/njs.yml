@@ -6,6 +6,9 @@ description: |
   NGINX njs dynamic modules
 build_requires:
   - libedit-devel
+  - libxml2-devel
+  - libxslt-devel
+config_dirname: nginx
 soname:
   - ngx_http_js_module
   - ngx_stream_js_module
@@ -13,3 +16,9 @@ directives_url:
   - http://nginx.org/en/docs/http/ngx_http_js_module.html
   - http://nginx.org/en/docs/stream/ngx_stream_js_module.html
 comment: extra step for cli app
+build_pre: |
+  pushd %{bdir}/njs-%{upstream_version} && ./configure && make njs && mv build build-cli && popd
+install_docs:
+  CHANGES:
+install_bins:
+  njs: build-cli/njs
