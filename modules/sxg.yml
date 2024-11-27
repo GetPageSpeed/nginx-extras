@@ -7,8 +7,5 @@ description: |
   response from upstream application into SXG, only for clients request
   on Accept: application/signed-exchane;v=b3 with highest qvalue.
 soname: ngx_http_subs_filter_module
-comment: |
-  commit-based releases not yet supported, and upstream did not tag
-  anything in years, so we tag own releases in our fork
-
-  https://github.com/yaoweibin/ngx_http_substitutions_filter_module/issues/37
+build_requires:
+  - libsxg-devel
