@@ -9,3 +9,9 @@ soname:
   - ngx_stream_geoip_module
 directives_url: http://nginx.org/en/docs/http/ngx_http_geoip_module.html#directives
 configure_arguments: --with-http_geoip_module=dynamic --with-stream_geoip_module=dynamic
+build_requires_raw: |
+  %if 0%{?suse_version} >= 1315
+  BuildRequires: libGeoIP-devel
+  %else
+  BuildRequires: GeoIP-devel
+  %endif
