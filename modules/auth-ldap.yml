@@ -1,7 +1,7 @@
 ---
 
 repo: dvershinin/nginx-auth-ldap
-summary: LDAP Authentication module for nginx
+summary: LDAP Authentication module for NGINX
 description: |
   LDAP module for nginx which supports authentication against
   multiple LDAP servers
@@ -22,8 +22,3 @@ build_requires_raw: |
 comment: |
   commit-based releases not yet supported, and upstream did not tag
   anything in years, so we tag own releases in our fork
-
-
-
-
-

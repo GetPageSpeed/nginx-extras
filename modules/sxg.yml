@@ -3,7 +3,7 @@
 repo: google/nginx-sxg-module
 summary: Signed HTTP Exchange(SXG) support for NGINX
 description: |
-  Signed HTTP Exchange(SXG) support for nginx. Nginx will convert
+  Signed HTTP Exchange(SXG) support for NGINX. Nginx will convert
   response from upstream application into SXG, only for clients request
   on Accept: application/signed-exchane;v=b3 with highest qvalue.
 soname: ngx_http_subs_filter_module

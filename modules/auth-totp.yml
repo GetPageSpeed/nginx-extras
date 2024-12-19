@@ -13,5 +13,3 @@ description: |
 
   This module provides TOTP authentication for a NGINX server.
 soname: ngx_http_auth_totp_module
-patches:
-  - https://github.com/61131/nginx-http-auth-totp/commit/018aa4a53dbde35e0ccab4e33862ff5725504bf2.diff
