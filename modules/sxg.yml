@@ -9,3 +9,5 @@ description: |
 soname: ngx_http_subs_filter_module
 build_requires:
   - libsxg-devel
+# RHEL 9: nginx-sxg-module-4.5/ngx_sxg_utils.c:395:54: error: 'update' may be used uninitialized in this function [-Werror=maybe-uninitialized]
+cc_opt: "-Wno-error"

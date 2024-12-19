@@ -5,7 +5,7 @@ summary: Decompresses Brotli-encoded responses for clients that do not support i
 description: |
   The ngx_unbrotli module is a filter that decompresses responses with
   Content-Encoding: br for clients that do not support Brotli encoding method.
-  It allows to save storage by unconditional Brotli compression of responses.
+  It allows to save I/O and storage by unconditional Brotli compression of responses.
 soname: ngx_http_unbrotli_filter_module
 build_requires:
   - pkgconfig(libbrotlicommon)
