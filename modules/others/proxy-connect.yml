@@ -1,0 +1,10 @@
+---
+
+repo: dvershinin/ngx_http_proxy_connect_module
+summary: CONNECT method support in NGINX
+description: |
+  CONNECT method support in NGINX
+soname:
+  - ngx_http_proxy_connect_module
+comment: |
+  statically built-in to NGINX-MOD due to patch alone exposing security issues
