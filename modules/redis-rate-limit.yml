@@ -1,0 +1,7 @@
+---
+
+repo: weserv/rate-limit-nginx-module
+summary: Redis backed rate limit module for Nginx
+description: |
+  A Redis backed rate limit module for Nginx web servers.
+soname: ngx_http_rate_limit_module
