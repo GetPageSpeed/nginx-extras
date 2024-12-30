@@ -9,6 +9,11 @@ jobs:
             - "8c:a4:dd:2c:47:4c:63:aa:90:0b:e0:d6:15:be:87:82"
       - checkout
       - run:
+          name: "Install Git"
+          command: |
+            apk update
+            apk add git
+      - run:
           name: "Bootstrap the build"
           command: |
             # Get the latest commit hash
