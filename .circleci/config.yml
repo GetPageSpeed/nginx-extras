@@ -57,7 +57,6 @@ jobs:
             # Check if GENERATE_PARAMS is set and not empty
             if [[ -n "$GENERATE_PARAMS" ]]; then
               echo "Invoking with parameters: $GENERATE_PARAMS"
-              exit 2
               ssh -o StrictHostKeyChecking=no $GPS_BUILD_USER@$GPS_BUILD_SERVER "$GPS_BUILD_BOOTSTRAP $GENERATE_PARAMS"
             else
               echo "No invocation required."

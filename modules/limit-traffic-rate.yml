@@ -3,5 +3,5 @@
 repo: dvershinin/ngx_http_limit_traffic_ratefilter_module
 summary: NGINX Limiting rate by given variables
 description: |
-  NGINX Limiting rate by given variables.
+  NGINX Limiting rate by given variables
 soname: ngx_http_limit_traffic_rate_filter_module
