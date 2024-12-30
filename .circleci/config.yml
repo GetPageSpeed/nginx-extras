@@ -24,8 +24,44 @@ jobs:
             changed_files=$(git diff-tree --no-commit-id --name-only -r "$latest_commit")
             echo "Changed files:"
             echo "$changed_files"
-            exit 2
-            ssh -o StrictHostKeyChecking=no $GPS_BUILD_USER@$GPS_BUILD_SERVER "$GPS_BUILD_BOOTSTRAP"
+
+            # Initialize an array to hold changed .yml file paths
+            changed_yml_files=()
+            
+            # Iterate through changed files to find .yml files in modules/ and its subdirectories
+            while IFS= read -r file; do
+              if [[ "$file" == "modules/"*.yml ]]; then
+                changed_yml_files+=("$file")
+              fi
+            done <<< "$changed_files"
+            
+            # Prepare the parameters for generate.sh
+            if [ ${#changed_yml_files[@]} -gt 0 ]; then
+              # Join file paths with commas
+              IFS=','; modules_csv="${changed_yml_files[*]}"
+              echo "Changed .yml files: ${changed_yml_files[*]}"
+              # Export the parameters for subsequent steps
+              echo "export GENERATE_PARAMS=\"${modules_csv}\"" >> $BASH_ENV
+            else
+              echo "No relevant .yml changes detected in modules/ directory."
+              # Export an empty GENERATE_PARAMS
+              echo "export GENERATE_PARAMS=\"\"" >> $BASH_ENV
+            fi
+      - run:
+          name: "Invoke with Changed Modules"
+          shell: bash
+          command: |
+            # Source the environment variables
+            source $BASH_ENV
+            
+            # Check if GENERATE_PARAMS is set and not empty
+            if [[ -n "$GENERATE_PARAMS" ]]; then
+              echo "Invoking with parameters: $GENERATE_PARAMS"
+              exit 2
+              ssh -o StrictHostKeyChecking=no $GPS_BUILD_USER@$GPS_BUILD_SERVER "$GPS_BUILD_BOOTSTRAP $GENERATE_PARAMS"
+            else
+              echo "No invocation required."
+            fi
 workflows:
   version: 2
   build-master:
