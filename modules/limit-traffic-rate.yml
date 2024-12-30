@@ -5,3 +5,5 @@ summary: NGINX Limiting rate by given variables
 description: |
   NGINX Limiting rate by given variables.
 soname: ngx_http_limit_traffic_rate_filter_module
+# https://github.com/nginx-modules/ngx_http_limit_traffic_ratefilter_module/issues/2
+cc_opt: "-Wno-error"
