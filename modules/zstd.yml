@@ -4,6 +4,7 @@ repo: tokers/zstd-nginx-module
 summary: NGINX module for the Zstandard compression
 description: |
   NGINX module for the Zstandard compression.
+  This Nginx module is currently considered experimental.
 soname:
   - ngx_http_zstd_filter_module
   - ngx_http_zstd_static_module
