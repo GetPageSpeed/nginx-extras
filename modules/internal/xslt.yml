@@ -2,7 +2,8 @@
 
 summary: NGINX XSLT dynamic module
 description: |
-  NGINX XSLT dynamic module
+  NGINX XSLT dynamic module.
+  This filter module transforms XML responses using one or more XSLT stylesheets.
 soname: ngx_http_xslt_filter_module
 directives_url: https://nginx.org/en/docs/http/ngx_http_xslt_module.html#directives
 configure_arguments: --with-http_xslt_module=dynamic
