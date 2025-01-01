@@ -8,3 +8,4 @@ directives_url: https://nginx.org/en/docs/http/ngx_http_xslt_module.html#directi
 configure_arguments: --with-http_xslt_module=dynamic
 build_requires:
   - libxslt-devel
+epel_name: nginx-mod-http-xslt-filter
