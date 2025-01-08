@@ -7,6 +7,10 @@ soname: ngx_http_perl_module
 directives_url: https://nginx.org/en/docs/http/ngx_http_perl_module.html#directives
 configure_arguments: --with-http_perl_module=dynamic
 build_requires_raw: |
+  %if 0%{?fedora} || 0%{?rhel} >= 9
+  BuildRequires: perl-macros
+  %endif
+  
   %if 0%{?suse_version} >= 1315
   BuildRequires: perl
   %else
@@ -17,3 +21,15 @@ requires:
   - |
     perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 epel_name: nginx-mod-http-perl
+extra_install_raw: |
+  %{__make} DESTDIR=$RPM_BUILD_ROOT INSTALLDIRS=vendor -f objs/Makefile install_perl_modules
+  find %{buildroot} -type f -name .packlist -exec rm -f '{}' \;
+  find %{buildroot} -type f -name perllocal.pod -exec rm -f '{}' \;
+  find %{buildroot} -type f -empty -exec rm -f '{}' \;
+  find %{buildroot} -type f -iname '*.so' -exec chmod 0755 '{}' \;
+extra_files_raw: |
+  %dir %{perl_vendorarch}/auto/nginx
+  %{perl_vendorarch}/nginx.pm
+  %{perl_vendorarch}/auto/nginx/nginx.so
+  %{perl_vendorarch}/auto/nginx/nginx-debug.so
+  %{_mandir}/man3/nginx.3pm*
