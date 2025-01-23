@@ -6,8 +6,9 @@ description: |
   Signed HTTP Exchange(SXG) support for NGINX. Nginx will convert
   response from upstream application into SXG, only for clients request
   on Accept: application/signed-exchane;v=b3 with highest qvalue.
-soname: ngx_http_subs_filter_module
+soname: ngx_http_sxg_filter_module
 build_requires:
   - libsxg-devel
 # RHEL 9: nginx-sxg-module-4.5/ngx_sxg_utils.c:395:54: error: 'update' may be used uninitialized in this function [-Werror=maybe-uninitialized]
 cc_opt: "-std=c99 -Wno-error"
+release: 9
