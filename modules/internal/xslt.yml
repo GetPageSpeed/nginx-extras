@@ -10,3 +10,4 @@ configure_arguments: --with-http_xslt_module=dynamic
 build_requires:
   - libxslt-devel
 epel_name: nginx-mod-http-xslt-filter
+release: 2

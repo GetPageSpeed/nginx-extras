@@ -33,3 +33,4 @@ extra_files_raw: |
   %{perl_vendorarch}/auto/nginx/nginx.so
   %{perl_vendorarch}/auto/nginx/nginx-debug.so
   %{_mandir}/man3/nginx.3pm*
+release: 2
