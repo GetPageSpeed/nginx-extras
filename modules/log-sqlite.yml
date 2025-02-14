@@ -1,0 +1,9 @@
+---
+
+repo: GetPageSpeed/ngx-sqlite-log
+summary: SQLite logger module for NGINX
+description: |
+  SQLite logger module for NGINX
+soname: ngx_http_sqlitelog_module
+build_requires:
+  - sqlite-devel
