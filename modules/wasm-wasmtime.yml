@@ -9,7 +9,7 @@ soname:
 build_requires:
   - wasmtime-c-api-devel
 build_pre: |
-  sed -i 's@26@29@' src/wasm/wrt/ngx_wrt.h
+  sed -i 's@26@29@' %{upstream_name}-%{gittag_nov}/src/wasm/wrt/ngx_wrt.h
   export NGX_WASM_RUNTIME=wasmtime
   export NGX_WASM_RUNTIME_INC=/usr/include
   export NGX_WASM_RUNTIME_LIB=/usr/lib64/libwasmtime.a 
