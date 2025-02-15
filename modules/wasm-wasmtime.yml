@@ -1,0 +1,14 @@
+---
+
+repo: Kong/ngx_wasm_module
+summary: Nginx with WebAssembly powered by wasmtime
+description: |
+  Nginx with WebAssembly powered by wasmtime
+soname:
+  - ngx_wasmx_module
+build_requires:
+  - wasmtime-c-api-devel
+build_pre: |
+  export NGX_WASM_RUNTIME=wasmtime
+  export NGX_WASM_RUNTIME_INC=/usr/include
+  export NGX_WASM_RUNTIME_LIB=/usr/lib64/libwasmtime.a 
