@@ -1,6 +1,6 @@
 ---
 
-repo: Kong/ngx_wasm_module
+repo: GetPageSpeed/ngx_wasm_module
 summary: Nginx with WebAssembly powered by wasmtime
 description: |
   Nginx with WebAssembly powered by wasmtime
