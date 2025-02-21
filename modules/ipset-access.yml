@@ -1,0 +1,10 @@
+---
+
+repo: GetPageSpeed/nginx_ipset_access_module
+summary: NGINX ipset access module
+description: |
+  NGINX module to control user access to sites using IPSET
+soname:
+  - ngx_http_ipset_access
+build_requires:
+  - ipset-devel
