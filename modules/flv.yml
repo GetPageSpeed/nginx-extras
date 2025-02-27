@@ -4,7 +4,7 @@ repo: winshining/nginx-http-flv-module
 summary: Media streaming server based on nginx-module-rtmp
 description: |
   Media streaming server based on nginx-module-rtmp.
-  In addtion to the features nginx-rtmp-module provides,
+  In addition to the features nginx-rtmp-module provides,
   HTTP-FLV, GOP cache and VHOST (one IP for multi domain names)
   are supported now.
 soname: ngx_http_flv_live_module
