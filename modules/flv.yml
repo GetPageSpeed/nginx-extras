@@ -8,3 +8,6 @@ description: |
   HTTP-FLV, GOP cache and VHOST (one IP for multi domain names)
   are supported now.
 soname: ngx_http_flv_live_module
+patches:
+  - https://patch-diff.githubusercontent.com/raw/winshining/nginx-http-flv-module/pull/273.patch
+release: 2
