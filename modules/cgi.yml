@@ -1,0 +1,7 @@
+---
+
+repo: pjincz/nginx-cgi
+summary: CGI support for NGINX
+description: |
+  CGI support for NGINX
+soname: ngx_http_cgi_module
