@@ -6,3 +6,5 @@ description: |
   This NGINX module adds security headers and removes insecure headers
   easily and according to HTTP specifications
 soname: ngx_http_security_headers_module
+# error: 'for' loop initial declarations are only allowed in C99 mode
+cc_opt: "-std=c99"
