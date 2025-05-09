@@ -19,8 +19,8 @@ For sysadmins this allows to:
 
 For module authors, this allows to:
 
-* deliver your module as installable package *in ten minutes*
-* automatic rebuilds when you tag new release of your module (within 24 hrs)
+* deliver your module as an installable package *in ten minutes*
+* automatic rebuilds when you tag a new release of your module (within 24 hrs)
 * automatic rebuilds against newly released NGINX versions
 
 ## Supported architectures
@@ -37,18 +37,20 @@ We provide NGINX module RPM packages for:
 * Amazon Linux
 * Suse Linux
 
+To verify the integrity of packages before installing, [import our GPG key first](https://nginx-extras.getpagespeed.com/integrity/).
+
 ### Step 1. Install repository configuration for your OS
 
-    sudo yum -y install https://extras.getpagespeed.com/release-latest.rpm
+    yum -y install https://extras.getpagespeed.com/release-latest.rpm
 
 ### Step 2. Enable installing modules for mainline NGINX (if you must)
 
-    sudo yum -y install yum-utils
-    sudo yum-config-manager --enable getpagespeed-extras-mainline
+    yum -y install yum-utils
+    yum-config-manager --enable getpagespeed-extras-mainline
 
 ### Step 3. Install the module, e.g. cache-purge     
 
-    sudo yum -y install nginx-module-cache-purge
+    yum -y install nginx-module-cache-purge
 
 ## Request a module
 
@@ -60,14 +62,14 @@ You can open a ticket/issue to request packaging of any of those.
 The module requirements are pretty straightforward, and most of the module repositories already follow it:
 
 * Hosted on GitHub
-* Tag releases with sane version numbers. Repositories without any version tag can't build. Pre-releases / beta versions are detected and *not* built
+* Tag releases with sensible version numbers. Repositories without any version tag can't build. Pre-releases / beta versions are detected and *not* built
 * `config` file in the root of repository *must* support compiling as dynamic module
 
 ### Submit your module for build
 
 * Fork the repository
 * Create `modules/<handle>.yml` file and specify parameters like the example below. The handle should be unique. The resulting package will have name `nginx-module-<handle>`, e.g. `nginx-module-foo`
-* Submit pull request. That's it! Your module will be automatically built against both stable and mainline NGINX. Check it within 10 mins [here](https://extras.getpagespeed.com/redhat/7/mainline/x86_64/repoview/letter_n.group.html) (for mainline NGINX) and [here](https://extras.getpagespeed.com/redhat/7/x86_64/repoview/letter_n.group.html) (for stable NGINX). If it doesn't appear, [raise an issue](https://github.com/GetPageSpeed/nginx-extras/issues/new).
+* Submit a pull request. That's it! Your module will be automatically built against both stable and mainline NGINX. Check it within 10 mins [here](https://extras.getpagespeed.com/redhat/7/mainline/x86_64/repoview/letter_n.group.html) (for mainline NGINX) and [here](https://extras.getpagespeed.com/redhat/7/x86_64/repoview/letter_n.group.html) (for stable NGINX). If it doesn't appear, [raise an issue](https://github.com/GetPageSpeed/nginx-extras/issues/new).
 
 ### Sample module.yml
 
@@ -104,7 +106,7 @@ Make sure that your latest release has a `LICENSE` if you want it to be included
 Some modules have a pretty sophisticated RPM logic. 
 One is example is `nginx-module-pagespeed`: it needs custom SELinux policy, among other things.
 Don't worry, we still build those modules elsewhere, and 
-they are available through our repository same as any module that is built through this sytem.
+they are available through our repository same as any module that is built through this system.
 
 If your module is one of those, raise an issue here.
 
