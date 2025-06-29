@@ -9,3 +9,4 @@ build_requires:
   - hiredis-devel
 build_pre: |
   export NGX_KEYVAL_ZONE_REDIS=1
+cc_opt: "-std=c99"
