@@ -1,0 +1,11 @@
+---
+
+repo: kjdev/nginx-keyval
+summary: Nginx module for the key-value store
+description: |
+  This nginx module creates variables with values taken from key-value pairs.
+soname: ngx_http_keyval_module
+build_requires:
+  - hiredis-devel
+build_pre: |
+  export NGX_KEYVAL_ZONE_REDIS=1
