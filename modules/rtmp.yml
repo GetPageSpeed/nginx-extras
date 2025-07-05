@@ -7,3 +7,4 @@ description: |
 soname: ngx_rtmp_module
 selinux_package: https://raw.githubusercontent.com/dvershinin/nginx-rtmp-module/master/nginx-module-rtmp.te
 # has an nginx-mod specific build as it depends on OpenSSL version
+bump: 2
