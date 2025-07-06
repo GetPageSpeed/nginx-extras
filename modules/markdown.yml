@@ -7,7 +7,9 @@ soname: ngx_markdown_filter_module
 build_requires:
   - cmark-gfm-devel
 build_pre: |
+  pushd %{upstream_name}-%{gittag_nov}
   rm -rf config
   mv config_gfm config
+  popd
 # fix for: ngx_markdown_filter_module.c:265:5: error: 'for' loop initial declarations are only allowed in C99 mode
 cc_opt: "-std=c99 -DWITH_CMARK_GFM=1"
