@@ -18,7 +18,13 @@ build_requires:
 # Ensure a sensible default state path is embedded, matching upstream/F5
 # packaging guidance. This can be overridden in nginx.conf via acme_issuer
 # configuration if needed.
+# Also point the Rust openssl-sys crate at our quictls-based OpenSSL and
+# bypass pkg-config, since quictls moves headers/libs under its own prefix
+# and renames the pkg-config files.
 build_pre: |
   export NGX_ACME_STATE_PREFIX=/var/cache/nginx
+  export OPENSSL_NO_PKG_CONFIG=1
+  export OPENSSL_LIB_DIR="%{_libdir}/quictls"
+  export OPENSSL_INCLUDE_DIR="%{_includedir}/quictls"
 
 
