@@ -1,0 +1,24 @@
+---
+
+repo: nginx/nginx-acme
+summary: Automatic certificate management (ACMEv2) module for NGINX
+description: |
+  An NGINX module with the implementation of the automatic certificate
+  management (ACMEv2) protocol.
+soname:
+  - ngx_http_acme_module
+
+# Rust/Cargo toolchain for building the module, plus clang for bindgen and
+# other Rust crates that depend on libclang.
+build_requires:
+  - clang
+  - rust
+  - cargo
+
+# Ensure a sensible default state path is embedded, matching upstream/F5
+# packaging guidance. This can be overridden in nginx.conf via acme_issuer
+# configuration if needed.
+build_pre: |
+  export NGX_ACME_STATE_PREFIX=/var/cache/nginx
+
+
