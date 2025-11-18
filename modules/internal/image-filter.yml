@@ -11,4 +11,4 @@ build_requires:
   - gd-devel
 requires:
   - gd
-release: 2
+release: 3
