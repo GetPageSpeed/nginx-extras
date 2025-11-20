@@ -1,0 +1,9 @@
+---
+
+repo: pandax381/ngx_http_pipelog_module
+summary: NGINX pipelog module
+description: |
+  An NGINX module for sending HTTP access logs to an external program via pipe.
+soname: ngx_http_pipelog_module
+
+
