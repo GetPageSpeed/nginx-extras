@@ -8,3 +8,5 @@ description: |
 soname: ngx_postgres_module
 build_requires:
   - postgresql-devel
+build_requires_deb:
+  - libpq-dev

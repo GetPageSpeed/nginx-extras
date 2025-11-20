@@ -10,3 +10,5 @@ soname: ngx_http_unbrotli_filter_module
 build_requires:
   - pkgconfig(libbrotlicommon)
   - pkgconfig(libbrotlidec)
+build_requires_deb:
+  - libbrotli-dev

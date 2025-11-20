@@ -7,6 +7,8 @@ description: |
 soname: ngx_http_keyval_module
 build_requires:
   - hiredis-devel
+build_requires_deb:
+  - libhiredis-dev
 build_pre: |
   export NGX_KEYVAL_ZONE_REDIS=1
 cc_opt: "-std=c99"

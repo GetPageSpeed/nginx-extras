@@ -9,6 +9,8 @@ description: |
 soname: ngx_http_sxg_filter_module
 build_requires:
   - libsxg-devel
+build_requires_deb:
+  - libsxg-dev
 # RHEL 9: nginx-sxg-module-4.5/ngx_sxg_utils.c:395:54: error: 'update' may be used uninitialized in this function [-Werror=maybe-uninitialized]
 cc_opt: "-std=c99 -Wno-error"
 release: 9

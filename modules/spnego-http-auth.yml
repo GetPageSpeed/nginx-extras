@@ -8,3 +8,5 @@ description: |
 soname: ngx_http_auth_spnego_module
 build_requires:
   - krb5-devel
+build_requires_deb:
+  - libkrb5-dev

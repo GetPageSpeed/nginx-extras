@@ -7,6 +7,8 @@ description: |
 soname: ngx_http_captcha_module
 build_requires:
   - gd-devel
+build_requires_deb:
+  - libgd-dev
 devtoolset:
   el7: 8
 ref:

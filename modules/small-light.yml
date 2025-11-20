@@ -20,6 +20,8 @@ description: |
 soname: ngx_http_small_light_module
 build_requires:
   - ImageMagick-devel
+build_requires_deb:
+  - libmagickwand-dev
 comment: |
   building off our work with generated config for CentOS
 # el8 /usr/include/ImageMagick-6/magick/pixel-accessor.h:220:15: error: type qualifiers ignored on function return type [-Werror=ignored-qualifiers]

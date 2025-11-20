@@ -9,6 +9,8 @@ soname:
   - ngx_http_brotli_static_module
 build_requires:
   - brotli-devel
+build_requires_deb:
+  - libbrotli-dev
 comment: |
   separate build system which yields Plesk-specific packages
   in addition to standard distribution

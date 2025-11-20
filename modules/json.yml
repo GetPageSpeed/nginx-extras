@@ -9,4 +9,6 @@ requires:
   - nginx-module-ndk
 build_requires:
   - pkgconfig(jansson)
+build_requires_deb:
+  - libjansson-dev
 cc_opt: "-std=c99"

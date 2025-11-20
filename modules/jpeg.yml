@@ -9,3 +9,5 @@ soname: ngx_http_jpeg_filter_module
 build_requires:
   - libmodjpeg-devel
   - libjpeg-turbo-devel
+build_requires_deb:
+  - libjpeg-dev

@@ -7,3 +7,5 @@ description: |
 soname: ngx_http_log_zmq_module
 build_requires:
   - zeromq-devel
+build_requires_deb:
+  - libzmq3-dev

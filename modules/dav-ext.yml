@@ -9,3 +9,6 @@ soname: ngx_http_dav_ext_module
 build_requires:
   - libxml2-devel
   - libxslt-devel
+build_requires_deb:
+  - libxml2-dev
+  - libxslt1-dev

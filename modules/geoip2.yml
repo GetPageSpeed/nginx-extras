@@ -11,3 +11,5 @@ soname:
   - ngx_stream_geoip2_module
 build_requires:
   - libmaxminddb-devel
+build_requires_deb:
+  - libmaxminddb-dev

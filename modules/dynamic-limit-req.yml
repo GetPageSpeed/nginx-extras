@@ -9,3 +9,5 @@ description: |
 soname: ngx_http_dynamic_limit_req_module
 build_requires:
   - hiredis-devel
+build_requires_deb:
+  - libhiredis-dev

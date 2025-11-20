@@ -9,3 +9,5 @@ soname:
   - ngx_http_ipset_access
 build_requires:
   - ipset-devel
+build_requires_deb:
+  - libipset-dev

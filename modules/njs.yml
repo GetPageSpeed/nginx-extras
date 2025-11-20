@@ -8,6 +8,10 @@ build_requires:
   - libedit-devel
   - libxml2-devel
   - libxslt-devel
+build_requires_deb:
+  - libedit-dev
+  - libxml2-dev
+  - libxslt1-dev
 config_dirname: nginx
 soname:
   - ngx_http_js_module

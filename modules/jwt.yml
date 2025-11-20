@@ -8,5 +8,8 @@ soname: ngx_http_auth_jwt_module
 build_requires:
   - pkgconfig(jansson)
   - pkgconfig(libjwt)
+build_requires_deb:
+  - libjansson-dev
+  - libjwt-dev
 devtoolset:
   el7: 8

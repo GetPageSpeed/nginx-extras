@@ -10,3 +10,5 @@ soname:
   - ngx_http_zstd_static_module
 build_requires:
   - libzstd-devel
+build_requires_deb:
+  - libzstd-dev

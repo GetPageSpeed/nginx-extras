@@ -16,3 +16,5 @@ build_requires_raw: |
   %else
   BuildRequires: glibc-headers
   %endif
+build_requires_deb:
+  - libc6-dev

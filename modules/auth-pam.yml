@@ -7,3 +7,5 @@ description: |
 soname: ngx_http_auth_pam_module
 build_requires:
   - pam-devel
+build_requires_deb:
+  - libpam0g-dev

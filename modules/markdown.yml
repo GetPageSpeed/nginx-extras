@@ -6,6 +6,8 @@ description: NGINX filter module that transforms markdown files to html format
 soname: ngx_markdown_filter_module
 build_requires:
   - cmark-gfm-devel
+build_requires_deb:
+  - libcmark-gfm-dev
 build_pre: |
   pushd %{upstream_name}-%{gittag_nov}
   rm -rf config

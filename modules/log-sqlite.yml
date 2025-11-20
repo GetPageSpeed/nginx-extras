@@ -7,3 +7,5 @@ description: |
 soname: ngx_http_sqlitelog_module
 build_requires:
   - sqlite-devel
+build_requires_deb:
+  - libsqlite3-dev
