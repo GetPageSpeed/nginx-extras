@@ -47,8 +47,12 @@ build_pre: |
       -DOPENSSL_INCLUDE_DIR=/usr/include/quictls \\\
       -DOPENSSL_CRYPTO_LIBRARY=/usr/lib64/quictls/libcrypto.so \\' %{upstream_name}-%{gittag_nov}/config || :
 
-  # Parallel make helper.
-  _nproc=$(getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
+  # Parallel make helper: in CI/CircleCI keep prebuilt deps single-threaded to avoid OOM.
+  if [ "${CIRCLECI:-}" = "true" ] || [ -n "${CI:-}" ]; then
+    _nproc=1
+  else
+    _nproc=$(getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
+  fi
   if [ "${_nproc}" -gt 1 ]; then
     _make_opts="-j${_nproc}"
   else
