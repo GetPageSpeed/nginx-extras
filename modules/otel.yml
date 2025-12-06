@@ -1,0 +1,178 @@
+---
+
+repo: nginxinc/nginx-otel
+summary: NGINX OpenTelemetry dynamic module
+description: |
+  OpenTelemetry tracing/exporter module for NGINX.
+soname:
+  - ngx_otel_module
+
+# Newer toolchain on EL7, matching upstream nginx-module-otel packaging.
+devtoolset:
+  el7: 9
+
+build_requires:
+  - cmake
+  - pkgconfig(re2)
+  - pkgconfig(libcares)
+  - curl
+
+# Extra raw spec bits for cmake_name indirection (EL7 needs cmake3).
+build_requires_raw: |
+  %global cmake_name cmake
+  %if 0%{?rhel} == 7
+  %global cmake_name cmake3
+  BuildRequires: cmake3
+  %endif
+
+# Heavyweight dependency build, inlined into %build via build_pre hook.
+# This intentionally fetches upstream tarballs at build time instead of using
+# additional Source tags, as a stopgap to get otel packaged via nginx-extras.
+build_pre: |
+  set -e
+
+  cd %{bdir}
+
+  # Ensure gRPC/otel-cpp and the nginx-otel CMake glue all see quictls-based OpenSSL.
+  export OPENSSL_ROOT_DIR=/usr/lib64/quictls
+  export OPENSSL_INCLUDE_DIR=/usr/include/quictls
+  export OPENSSL_CRYPTO_LIBRARY=/usr/lib64/quictls/libcrypto.so
+
+  # Ensure the module's config uses the right cmake binary (cmake vs cmake3).
+  sed -i 's@cmake@%{cmake_name}@' %{upstream_name}-%{gittag_nov}/config || :
+
+  # Tiny sed: also pass quictls OpenSSL hints into nginx-otel's CMake invocation,
+  # so the in-tree gRPC under objs/otel/_deps/ sees them via FindOpenSSL.
+  sed -i '/CMAKE_MODULE_LINKER_FLAGS=\$NGX_LD_OPT"/a\      -DOPENSSL_ROOT_DIR=/usr/lib64/quictls \\\
+      -DOPENSSL_INCLUDE_DIR=/usr/include/quictls \\\
+      -DOPENSSL_CRYPTO_LIBRARY=/usr/lib64/quictls/libcrypto.so \\' %{upstream_name}-%{gittag_nov}/config || :
+
+  # Parallel make helper.
+  _nproc=$(getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
+  if [ "${_nproc}" -gt 1 ]; then
+    _make_opts="-j${_nproc}"
+  else
+    _make_opts=""
+  fi
+  export _make_opts
+
+  # Download and unpack third-party dependencies (versions aligned with
+  # official nginx-module-otel packaging).
+  curl -L https://github.com/protocolbuffers/protobuf/archive/refs/tags/v3.19.5.tar.gz -o protobuf-3.19.5.tar.gz
+  tar xzf protobuf-3.19.5.tar.gz
+
+  curl -L https://github.com/abseil/abseil-cpp/archive/refs/tags/20211102.0.tar.gz -o abseil-cpp-20211102.0.tar.gz
+  tar xzf abseil-cpp-20211102.0.tar.gz
+
+  curl -L https://github.com/grpc/grpc/archive/refs/tags/v1.46.7.tar.gz -o grpc-1.46.7.tar.gz
+  tar xzf grpc-1.46.7.tar.gz
+
+  curl -L https://github.com/open-telemetry/opentelemetry-cpp/archive/refs/tags/v1.11.0.tar.gz -o opentelemetry-cpp-1.11.0.tar.gz
+  tar xzf opentelemetry-cpp-1.11.0.tar.gz
+
+  curl -L https://github.com/open-telemetry/opentelemetry-proto/archive/refs/tags/v1.0.0.tar.gz -o opentelemetry-proto-1.0.0.tar.gz
+  tar xzf opentelemetry-proto-1.0.0.tar.gz
+
+  mkdir -p %{bdir}/prebuilt
+
+  # Build protobuf
+  cd %{bdir}/protobuf-3.19.5
+  mkdir -p build
+  cd build
+  %{cmake_name} \
+    -DCMAKE_CXX_STANDARD=11 \
+    -DCMAKE_CXX_EXTENSIONS=OFF \
+    -DCMAKE_CXX_VISIBILITY_PRESET=hidden \
+    -DCMAKE_POLICY_DEFAULT_CMP0063=NEW \
+    -DCMAKE_PREFIX_PATH=%{bdir}/prebuilt/ \
+    -DCMAKE_INSTALL_PREFIX:STRING=%{bdir}/prebuilt/ \
+    -DCMAKE_INSTALL_LIBDIR:STRING=lib \
+    -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+    -Dprotobuf_BUILD_TESTS=OFF \
+    -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    ../cmake/
+  make ${_make_opts} install
+
+  # Build abseil-cpp
+  cd %{bdir}/abseil-cpp-20211102.0
+  mkdir -p build
+  cd build
+  %{cmake_name} \
+    -DCMAKE_CXX_STANDARD=11 \
+    -DCMAKE_CXX_EXTENSIONS=OFF \
+    -DCMAKE_CXX_VISIBILITY_PRESET=hidden \
+    -DCMAKE_POLICY_DEFAULT_CMP0063=NEW \
+    -DCMAKE_PREFIX_PATH=%{bdir}/prebuilt/ \
+    -DCMAKE_INSTALL_PREFIX:STRING=%{bdir}/prebuilt/ \
+    -DCMAKE_INSTALL_LIBDIR:STRING=lib \
+    -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+    -DBUILD_TESTING=OFF \
+    -DWITH_BENCHMARK=OFF \
+    -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    ../
+  make ${_make_opts} install
+
+  # Build gRPC (prebuilt, using quictls OpenSSL)
+  cd %{bdir}/grpc-1.46.7
+  mkdir -p build
+  cd build
+  CXXFLAGS='-DGRPC_NO_XDS -DGRPC_NO_RLS' %{cmake_name} \
+    -DCMAKE_CXX_STANDARD=11 \
+    -DCMAKE_CXX_EXTENSIONS=OFF \
+    -DCMAKE_CXX_VISIBILITY_PRESET=hidden \
+    -DCMAKE_POLICY_DEFAULT_CMP0063=NEW \
+    -DCMAKE_PREFIX_PATH=%{bdir}/prebuilt/ \
+    -DCMAKE_INSTALL_PREFIX:STRING=%{bdir}/prebuilt/ \
+    -DCMAKE_INSTALL_LIBDIR:STRING=lib \
+    -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+    -DgRPC_BUILD_GRPC_RUBY_PLUGIN=OFF \
+    -DgRPC_BUILD_GRPC_PYTHON_PLUGIN=OFF \
+    -DgRPC_BUILD_GRPC_PHP_PLUGIN=OFF \
+    -DgRPC_BUILD_GRPC_OBJECTIVE_C_PLUGIN=OFF \
+    -DgRPC_BUILD_GRPC_NODE_PLUGIN=OFF \
+    -DgRPC_BUILD_GRPC_CSHARP_PLUGIN=OFF \
+    -DgRPC_BUILD_CSHARP_EXT=OFF \
+    -DgRPC_BUILD_CODEGEN=ON \
+    -DgRPC_RE2_PROVIDER=package \
+    -DgRPC_SSL_PROVIDER=package \
+    -DgRPC_ZLIB_PROVIDER=package \
+    -DgRPC_CARES_PROVIDER=package \
+    -DgRPC_ABSL_PROVIDER=package \
+    -DgRPC_PROTOBUF_PROVIDER=package \
+    -DgRPC_PROTOBUF_PACKAGE_TYPE=CONFIG \
+    -DgRPC_USE_PROTO_LITE=ON \
+    -DOPENSSL_ROOT_DIR=/usr/lib64/quictls \
+    -DOPENSSL_INCLUDE_DIR=/usr/include/quictls \
+    -DOPENSSL_CRYPTO_LIBRARY=/usr/lib64/quictls/libcrypto.so \
+    -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    ../
+  make ${_make_opts} install
+
+  # Build opentelemetry-cpp (prebuilt, using quictls OpenSSL)
+  cd %{bdir}/opentelemetry-cpp-1.11.0
+  mkdir -p build
+  cd build
+  %{cmake_name} \
+    -DCMAKE_CXX_STANDARD=11 \
+    -DCMAKE_CXX_EXTENSIONS=OFF \
+    -DCMAKE_CXX_VISIBILITY_PRESET=hidden \
+    -DCMAKE_POLICY_DEFAULT_CMP0063=NEW \
+    -DCMAKE_PREFIX_PATH=%{bdir}/prebuilt/ \
+    -DCMAKE_INSTALL_PREFIX:STRING=%{bdir}/prebuilt/ \
+    -DCMAKE_INSTALL_LIBDIR:STRING=lib \
+    -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+    -DBUILD_TESTING=OFF \
+    -DWITH_ABSEIL=ON \
+    -DWITH_BENCHMARK=OFF \
+    -DWITH_EXAMPLES=OFF \
+    -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    ../
+  make ${_make_opts} install
+
+  # Environment expected by nginx-otel's build.
+  cd %{bdir}
+  export PATH=%{bdir}/prebuilt/bin/:$PATH
+  export NGX_OTEL_PROTO_DIR=%{bdir}/opentelemetry-proto-1.0.0
+  export CMAKE_PREFIX_PATH=%{bdir}/prebuilt/
+
+
