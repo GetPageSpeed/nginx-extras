@@ -1,0 +1,16 @@
+---
+
+repo: nginxinc/nginx-otel
+summary: NGINX OpenTelemetry dynamic module
+description: |
+  OpenTelemetry tracing/exporter module for NGINX.
+soname:
+  - ngx_otel_module
+
+comment: |
+  Special-case module:
+  - Uses a heavy, custom C++ dependency toolchain (protobuf, gRPC, Abseil, otel-cpp).
+  - Built via dedicated nginx-module-otel packaging
+
+
+
