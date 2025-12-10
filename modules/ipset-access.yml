@@ -11,3 +11,8 @@ build_requires:
   - ipset-devel
 build_requires_deb:
   - libipset-dev
+build_pre: |
+  %if 0%{?suse_version}
+  # On SLES, ipset headers are in /usr/include/ipset/libipset instead of /usr/include/libipset
+  ln -sf /usr/include/ipset/libipset /usr/include/libipset
+  %endif
