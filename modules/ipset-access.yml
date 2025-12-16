@@ -5,18 +5,18 @@ summary: Zero-latency IP blocking using Linux kernel ipsets
 description: |
   High-performance NGINX module for IP-based access control using Linux kernel ipsets.
   
-  **Key Features:**
+  Key Features:
   
-  - **Blacklist/Whitelist modes** - Block or allow IPs based on ipset membership
-  - **Honeypot auto-add** - Automatically add malicious IPs to ipsets with configurable timeouts
-  - **Built-in rate limiting** - Per-IP rate limiting with auto-ban to ipsets
-  - **JavaScript challenges** - Proof-of-work challenges to filter bots
-  - **Dual-stack support** - Works with both IPv4 and IPv6 ipsets
-  - **FirewallD compatible** - Integrates with firewall-cmd managed ipsets
-  - **Whitelist bypass** - Whitelisted IPs skip rate limiting and challenges
-  - **Dry-run mode** - Test rules in production without blocking
-  - **Prometheus metrics** - Native `/metrics` endpoint for monitoring
-  - **LRU cache** - Shared memory cache for high-performance lookups
+  - Blacklist/Whitelist modes: Block or allow IPs based on ipset membership
+  - Honeypot auto-add: Automatically add malicious IPs to ipsets with configurable timeouts and custom HTTP status codes
+  - Built-in rate limiting: Per-IP rate limiting with auto-ban to ipsets
+  - JavaScript challenges: Proof-of-work challenges to filter bots
+  - Dual-stack support: Works with both IPv4 and IPv6 ipsets
+  - FirewallD compatible: Integrates with firewall-cmd managed ipsets
+  - Whitelist bypass: Whitelisted IPs skip rate limiting and challenges
+  - Dry-run mode: Test rules in production without blocking
+  - Prometheus metrics: Native /metrics endpoint for monitoring
+  - LRU cache: Shared memory cache for high-performance lookups
   
   Uses libipset directly (no CLI fallback) for kernel-level performance.
   Compatible with realip module for proper client IP detection behind proxies.
