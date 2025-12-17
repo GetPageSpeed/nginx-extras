@@ -20,13 +20,22 @@ description: |
   
   Uses libipset directly (no CLI fallback) for kernel-level performance.
   Compatible with realip module for proper client IP detection behind proxies.
+  
+  Note: This module requires CAP_NET_ADMIN capability. The selinux subpackage
+  includes a systemd override and helper library to enable this automatically.
 plan: enterprise
 soname:
   - ngx_http_ipset_access
+# Use special template for ipset-access (includes capability helper, systemd override)
+spec_template: spec-ipset.j2
+# SELinux policy (local path in source tarball)
+selinux_package: selinux/nginx_module_ipset_access.te
 build_requires:
   - ipset-devel
+  - libcap-devel
 build_requires_deb:
   - libipset-dev
+  - libcap-dev
 build_pre: |
   %if 0%{?suse_version}
   ## On SLES, ipset headers are in /usr/include/ipset/libipset instead of /usr/include/libipset
