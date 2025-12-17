@@ -1,7 +1,7 @@
 ---
-# v2.0.8: SELinux policy + capability helper for CAP_NET_ADMIN
+# v2.0.8: SELinux policy v1.1 + capability helper for CAP_NET_ADMIN
 repo: GetPageSpeed/ngx_ipset_access_module
-summary: Zero-latency IP blocking using Linux kernel ipsets
+summary: Zero-latency IP blocking using Linux kernel ipsets (v2)
 description: |
   High-performance NGINX module for IP-based access control using Linux kernel ipsets.
   
