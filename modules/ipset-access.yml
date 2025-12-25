@@ -23,7 +23,7 @@ description: |
   
   Note: This module requires CAP_NET_ADMIN capability. The selinux subpackage
   includes a systemd override and helper library to enable this automatically.
-plan: enterprise
+plan: pro
 soname:
   - ngx_http_ipset_access
 # Use special template for ipset-access (includes capability helper, systemd override)
