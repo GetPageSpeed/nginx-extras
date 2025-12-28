@@ -8,8 +8,12 @@ soname: ngx_rtmp_module
 selinux_package: https://raw.githubusercontent.com/dvershinin/nginx-rtmp-module/master/nginx-module-rtmp.te
 # no longer has an nginx-mod specific build as all NGINX flavors RPM builds rely on QuicTLS
 bump: 2
-build_requires_raw: |
+extra_package_metadata_raw: |
   # Obsolete nginx-mod-module-rtmp because there is no need for mod version when QuicTLS is used everywhere
   Provides: nginx-mod-module-%{handle} = 3:%{version}
   Obsoletes: nginx-mod-module-%{handle} < 3:%{version}
-release: 2
+extra_selinux_package_metadata_raw: |  
+  # Obsolete nginx-mod-module-rtmp-selinux because there is no need for mod version when QuicTLS is used everywhere
+  Provides: nginx-mod-module-%{handle}-selinux = 3:%{version}
+  Obsoletes: nginx-mod-module-%{handle}-selinux < 3:%{version}
+release: 3
