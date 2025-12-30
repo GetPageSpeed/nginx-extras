@@ -1,0 +1,10 @@
+---
+
+repo: GetPageSpeed/ngx_http_sorted_args
+summary: HTTP querystring parameters normalization for NGINX
+description: |
+  Powerful NGINX module that normalizes HTTP request querystring parameters 
+  by sorting them alphanumerically.
+soname: ngx_http_sorted_args
+
+
