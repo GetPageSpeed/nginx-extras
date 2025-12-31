@@ -1,0 +1,18 @@
+---
+
+repo: TeslaGov/ngx-http-auth-jwt-module
+summary: Secure your NGINX locations with JWT
+description: |
+  This is an NGINX module to check for a valid JWT and proxy to an upstream 
+  server or redirect to a login page. It supports additional features such as 
+  extracting claims from the JWT and placing them on the request/response 
+  headers
+soname: ngx_http_auth_jwt_module
+build_requires:
+  - pkgconfig(jansson)
+  - pkgconfig(libjwt)
+build_requires_deb:
+  - libjansson-dev
+  - libjwt-dev
+devtoolset:
+  el7: 8
