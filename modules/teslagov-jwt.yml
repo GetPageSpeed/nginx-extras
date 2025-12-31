@@ -16,3 +16,4 @@ build_requires_deb:
   - libjwt-dev
 devtoolset:
   el7: 8
+cc_opt: "-DNGX_LINKED_LIST_COOKIES=1"
